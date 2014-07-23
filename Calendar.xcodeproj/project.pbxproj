@@ -22,16 +22,11 @@
 		DDEFF2F4196C3DAC004ADA85 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDEFF2D6196C3DAC004ADA85 /* UIKit.framework */; };
 		DDEFF2FC196C3DAC004ADA85 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DDEFF2FA196C3DAC004ADA85 /* InfoPlist.strings */; };
 		DDEFF2FE196C3DAC004ADA85 /* CalendarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEFF2FD196C3DAC004ADA85 /* CalendarTests.m */; };
+		DDF2BCCB197F43BE00E2BECA /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF2BCCA197F43BE00E2BECA /* Profile.m */; };
+		DDF2BCCF197F48C200E2BECA /* anonymous.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DDF2BCCE197F48C200E2BECA /* anonymous.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		DD900C9D197DBC2300B28809 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DD900C99197DBC2300B28809 /* Kal.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D;
-			remoteInfo = Kal;
-		};
 		DDEFF2F5196C3DAC004ADA85 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DDEFF2C7196C3DAC004ADA85 /* Project object */;
@@ -43,7 +38,6 @@
 
 /* Begin PBXFileReference section */
 		DD0FB4D6197DB20700B89269 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		DD900C99197DBC2300B28809 /* Kal.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kal.xcodeproj; path = ../Kal/src/Kal.xcodeproj; sourceTree = "<group>"; };
 		DDE66AE7197748540032724F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DDEFF2CF196C3DAC004ADA85 /* Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDEFF2D2196C3DAC004ADA85 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -64,6 +58,9 @@
 		DDEFF2F9196C3DAC004ADA85 /* CalendarTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CalendarTests-Info.plist"; sourceTree = "<group>"; };
 		DDEFF2FB196C3DAC004ADA85 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DDEFF2FD196C3DAC004ADA85 /* CalendarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarTests.m; sourceTree = "<group>"; };
+		DDF2BCC9197F43BE00E2BECA /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Profile.h; path = Calendar/Profile.h; sourceTree = "<group>"; };
+		DDF2BCCA197F43BE00E2BECA /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Profile.m; path = Calendar/Profile.m; sourceTree = "<group>"; };
+		DDF2BCCE197F48C200E2BECA /* anonymous.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = anonymous.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,18 +88,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DD900C9A197DBC2300B28809 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				DD900C9E197DBC2300B28809 /* libKal.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		DDEFF2C6196C3DAC004ADA85 = {
 			isa = PBXGroup;
 			children = (
-				DD900C99197DBC2300B28809 /* Kal.xcodeproj */,
+				DDF2BCC9197F43BE00E2BECA /* Profile.h */,
+				DDF2BCCA197F43BE00E2BECA /* Profile.m */,
 				DDEFF2D8196C3DAC004ADA85 /* Calendar */,
 				DDEFF2F7196C3DAC004ADA85 /* CalendarTests */,
 				DDEFF2D1196C3DAC004ADA85 /* Frameworks */,
@@ -135,6 +125,7 @@
 		DDEFF2D8196C3DAC004ADA85 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				DDF2BCCE197F48C200E2BECA /* anonymous.jpg */,
 				DDEFF2E1196C3DAC004ADA85 /* AppDelegate.h */,
 				DDEFF2E2196C3DAC004ADA85 /* AppDelegate.m */,
 				DDEFF2E4196C3DAC004ADA85 /* Main.storyboard */,
@@ -238,12 +229,6 @@
 			mainGroup = DDEFF2C6196C3DAC004ADA85;
 			productRefGroup = DDEFF2D0196C3DAC004ADA85 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = DD900C9A197DBC2300B28809 /* Products */;
-					ProjectRef = DD900C99197DBC2300B28809 /* Kal.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				DDEFF2CE196C3DAC004ADA85 /* Calendar */,
@@ -252,22 +237,13 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		DD900C9E197DBC2300B28809 /* libKal.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libKal.a;
-			remoteRef = DD900C9D197DBC2300B28809 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
 		DDEFF2CD196C3DAC004ADA85 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				DDEFF2EB196C3DAC004ADA85 /* Images.xcassets in Resources */,
+				DDF2BCCF197F48C200E2BECA /* anonymous.jpg in Resources */,
 				DDEFF2DD196C3DAC004ADA85 /* InfoPlist.strings in Resources */,
 				DDEFF2E6196C3DAC004ADA85 /* Main.storyboard in Resources */,
 			);
@@ -289,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDEFF2E9196C3DAC004ADA85 /* ViewController.m in Sources */,
+				DDF2BCCB197F43BE00E2BECA /* Profile.m in Sources */,
 				DDEFF2E3196C3DAC004ADA85 /* AppDelegate.m in Sources */,
 				DDEFF2DF196C3DAC004ADA85 /* main.m in Sources */,
 			);
