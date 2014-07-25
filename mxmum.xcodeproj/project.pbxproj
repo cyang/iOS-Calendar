@@ -130,9 +130,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		DD818261198302100044D149 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
 		DDEFF2C6196C3DAC004ADA85 = {
 			isa = PBXGroup;
 			children = (
+				DD818261198302100044D149 /* iPad */,
 				DDF2BCC9197F43BE00E2BECA /* Profile.h */,
 				DDF2BCCA197F43BE00E2BECA /* Profile.m */,
 				DDEFF2D8196C3DAC004ADA85 /* Calendar */,
@@ -479,8 +487,10 @@
 					/Users/ChrisYang/Documents/mxmum/tapkulibrary/src,
 				);
 				INFOPLIST_FILE = "Calendar/mxmum-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = mxmum;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -498,8 +508,10 @@
 					/Users/ChrisYang/Documents/mxmum/tapkulibrary/src,
 				);
 				INFOPLIST_FILE = "Calendar/mxmum-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = mxmum;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

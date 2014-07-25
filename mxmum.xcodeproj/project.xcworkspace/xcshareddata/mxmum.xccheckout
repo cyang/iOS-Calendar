@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C82788C5-B986-444C-8D8E-A2B879384A82</string>
+	<key>IDESourceControlProjectName</key>
+	<string>mxmum</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DF2F141A-9254-4D08-AFDB-56F943329211</key>
+		<string>https://github.com/cyang001/Calendar.git</string>
+		<key>E147530B-47B1-4CE3-8305-B87CE60BB181</key>
+		<string>https://github.com/devinross/tapkulibrary.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>mxmum.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DF2F141A-9254-4D08-AFDB-56F943329211</key>
+		<string>../..</string>
+		<key>E147530B-47B1-4CE3-8305-B87CE60BB181</key>
+		<string>../../../tapkulibrary</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/cyang001/Calendar.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DF2F141A-9254-4D08-AFDB-56F943329211</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DF2F141A-9254-4D08-AFDB-56F943329211</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Calendar</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E147530B-47B1-4CE3-8305-B87CE60BB181</string>
+			<key>IDESourceControlWCCName</key>
+			<string>tapkulibrary</string>
+		</dict>
+	</array>
+</dict>
+</plist>

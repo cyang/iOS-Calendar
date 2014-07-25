@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DDEFF2CE196C3DAC004ADA85"
-               BuildableName = "Calendar.app"
+               BuildableName = "mxmum.app"
                BlueprintName = "mxmum"
                ReferencedContainer = "container:mxmum.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DDEFF2EF196C3DAC004ADA85"
-               BuildableName = "CalendarTests.xctest"
+               BuildableName = "mxmumTests.xctest"
                BlueprintName = "mxmumTests"
                ReferencedContainer = "container:mxmum.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DDEFF2CE196C3DAC004ADA85"
-            BuildableName = "Calendar.app"
+            BuildableName = "mxmum.app"
             BlueprintName = "mxmum"
             ReferencedContainer = "container:mxmum.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DDEFF2CE196C3DAC004ADA85"
-            BuildableName = "Calendar.app"
+            BuildableName = "mxmum.app"
             BlueprintName = "mxmum"
             ReferencedContainer = "container:mxmum.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DDEFF2CE196C3DAC004ADA85"
-            BuildableName = "Calendar.app"
+            BuildableName = "mxmum.app"
             BlueprintName = "mxmum"
             ReferencedContainer = "container:mxmum.xcodeproj">
          </BuildableReference>
