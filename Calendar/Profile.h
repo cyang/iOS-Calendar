@@ -16,5 +16,6 @@
 
 - (IBAction)selectPhoto:(UIButton *)sender;
 
+@property (strong, nonatomic) IBOutlet UILabel *fullName;
 
 @end
