@@ -208,7 +208,7 @@
                                     <navigationItem id="Mgq-LJ-Adi"/>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mxmum™ App Logo (Header).png" translatesAutoresizingMaskIntoConstraints="NO" id="qjT-5m-zD0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mxmum™ App Header Logo (44x317)" translatesAutoresizingMaskIntoConstraints="NO" id="xHm-a1-2NT">
                                 <rect key="frame" x="85" y="31" width="158" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -264,6 +264,10 @@
                                     <navigationItem id="rEg-Db-WEt"/>
                                 </items>
                             </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mxmum™ App Header Logo (44x317)" translatesAutoresizingMaskIntoConstraints="NO" id="8wo-HD-Jqh">
+                                <rect key="frame" x="85" y="31" width="158" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -333,6 +337,10 @@
                                     <navigationItem id="bo9-gr-nfs"/>
                                 </items>
                             </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mxmum™ App Header Logo (44x317)" translatesAutoresizingMaskIntoConstraints="NO" id="urc-Lc-Rfu">
+                                <rect key="frame" x="85" y="31" width="158" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -530,7 +538,7 @@
     </scenes>
     <resources>
         <image name="anonymous.jpg" width="900" height="1200"/>
-        <image name="mxmum™ App Logo (Header).png" width="158" height="22"/>
+        <image name="mxmum™ App Header Logo (44x317)" width="317" height="44"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -538,8 +546,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="RrB-z3-5XV"/>
         <segue reference="ZAj-bs-TOU"/>
-        <segue reference="9mE-W4-hwr"/>
+        <segue reference="RrB-z3-5XV"/>
+        <segue reference="rbi-wK-Kbr"/>
     </inferredMetricsTieBreakers>
 </document>
