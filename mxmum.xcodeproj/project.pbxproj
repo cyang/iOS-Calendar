@@ -70,23 +70,23 @@
 		DD3A91031982BFDC007AEBE4 /* Calendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calendar.m; sourceTree = "<group>"; };
 		DD8182551982E8D40044D149 /* mxmum™ App Logo (Header).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mxmum™ App Logo (Header).png"; path = "../../mxmum™ App Logo (Header).png"; sourceTree = "<group>"; };
 		DDE66AE7197748540032724F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		DDEFF2CF196C3DAC004ADA85 /* Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDEFF2CF196C3DAC004ADA85 /* mxmum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mxmum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDEFF2D2196C3DAC004ADA85 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DDEFF2D4196C3DAC004ADA85 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		DDEFF2D6196C3DAC004ADA85 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		DDEFF2DA196C3DAC004ADA85 /* Calendar-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Calendar-Info.plist"; sourceTree = "<group>"; };
+		DDEFF2DA196C3DAC004ADA85 /* mxmum-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "mxmum-Info.plist"; sourceTree = "<group>"; };
 		DDEFF2DC196C3DAC004ADA85 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DDEFF2DE196C3DAC004ADA85 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DDEFF2E0196C3DAC004ADA85 /* Calendar-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Calendar-Prefix.pch"; sourceTree = "<group>"; };
+		DDEFF2E0196C3DAC004ADA85 /* mxmum-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mxmum-Prefix.pch"; sourceTree = "<group>"; };
 		DDEFF2E1196C3DAC004ADA85 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DDEFF2E2196C3DAC004ADA85 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DDEFF2E5196C3DAC004ADA85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DDEFF2E7196C3DAC004ADA85 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		DDEFF2E8196C3DAC004ADA85 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DDEFF2EA196C3DAC004ADA85 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		DDEFF2F0196C3DAC004ADA85 /* CalendarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalendarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDEFF2F0196C3DAC004ADA85 /* mxmumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mxmumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDEFF2F1196C3DAC004ADA85 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		DDEFF2F9196C3DAC004ADA85 /* CalendarTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CalendarTests-Info.plist"; sourceTree = "<group>"; };
+		DDEFF2F9196C3DAC004ADA85 /* mxmumTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "mxmumTests-Info.plist"; sourceTree = "<group>"; };
 		DDEFF2FB196C3DAC004ADA85 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DDEFF2FD196C3DAC004ADA85 /* CalendarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarTests.m; sourceTree = "<group>"; };
 		DDF2BCC9197F43BE00E2BECA /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Profile.h; path = Calendar/Profile.h; sourceTree = "<group>"; };
@@ -145,8 +145,8 @@
 		DDEFF2D0196C3DAC004ADA85 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DDEFF2CF196C3DAC004ADA85 /* Calendar.app */,
-				DDEFF2F0196C3DAC004ADA85 /* CalendarTests.xctest */,
+				DDEFF2CF196C3DAC004ADA85 /* mxmum.app */,
+				DDEFF2F0196C3DAC004ADA85 /* mxmumTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -187,10 +187,10 @@
 		DDEFF2D9196C3DAC004ADA85 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				DDEFF2DA196C3DAC004ADA85 /* Calendar-Info.plist */,
+				DDEFF2DA196C3DAC004ADA85 /* mxmum-Info.plist */,
 				DDEFF2DB196C3DAC004ADA85 /* InfoPlist.strings */,
 				DDEFF2DE196C3DAC004ADA85 /* main.m */,
-				DDEFF2E0196C3DAC004ADA85 /* Calendar-Prefix.pch */,
+				DDEFF2E0196C3DAC004ADA85 /* mxmum-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -207,7 +207,7 @@
 		DDEFF2F8196C3DAC004ADA85 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				DDEFF2F9196C3DAC004ADA85 /* CalendarTests-Info.plist */,
+				DDEFF2F9196C3DAC004ADA85 /* mxmumTests-Info.plist */,
 				DDEFF2FA196C3DAC004ADA85 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -216,9 +216,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DDEFF2CE196C3DAC004ADA85 /* Calendar */ = {
+		DDEFF2CE196C3DAC004ADA85 /* mxmum */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DDEFF301196C3DAC004ADA85 /* Build configuration list for PBXNativeTarget "Calendar" */;
+			buildConfigurationList = DDEFF301196C3DAC004ADA85 /* Build configuration list for PBXNativeTarget "mxmum" */;
 			buildPhases = (
 				DDEFF2CB196C3DAC004ADA85 /* Sources */,
 				DDEFF2CC196C3DAC004ADA85 /* Frameworks */,
@@ -229,14 +229,14 @@
 			dependencies = (
 				DD3A90FF1982BEFF007AEBE4 /* PBXTargetDependency */,
 			);
-			name = Calendar;
+			name = mxmum;
 			productName = Calendar;
-			productReference = DDEFF2CF196C3DAC004ADA85 /* Calendar.app */;
+			productReference = DDEFF2CF196C3DAC004ADA85 /* mxmum.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DDEFF2EF196C3DAC004ADA85 /* CalendarTests */ = {
+		DDEFF2EF196C3DAC004ADA85 /* mxmumTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DDEFF304196C3DAC004ADA85 /* Build configuration list for PBXNativeTarget "CalendarTests" */;
+			buildConfigurationList = DDEFF304196C3DAC004ADA85 /* Build configuration list for PBXNativeTarget "mxmumTests" */;
 			buildPhases = (
 				DDEFF2EC196C3DAC004ADA85 /* Sources */,
 				DDEFF2ED196C3DAC004ADA85 /* Frameworks */,
@@ -247,9 +247,9 @@
 			dependencies = (
 				DDEFF2F6196C3DAC004ADA85 /* PBXTargetDependency */,
 			);
-			name = CalendarTests;
+			name = mxmumTests;
 			productName = CalendarTests;
-			productReference = DDEFF2F0196C3DAC004ADA85 /* CalendarTests.xctest */;
+			productReference = DDEFF2F0196C3DAC004ADA85 /* mxmumTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -266,7 +266,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DDEFF2CA196C3DAC004ADA85 /* Build configuration list for PBXProject "Calendar" */;
+			buildConfigurationList = DDEFF2CA196C3DAC004ADA85 /* Build configuration list for PBXProject "mxmum" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -285,8 +285,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				DDEFF2CE196C3DAC004ADA85 /* Calendar */,
-				DDEFF2EF196C3DAC004ADA85 /* CalendarTests */,
+				DDEFF2CE196C3DAC004ADA85 /* mxmum */,
+				DDEFF2EF196C3DAC004ADA85 /* mxmumTests */,
 			);
 		};
 /* End PBXProject section */
@@ -363,7 +363,7 @@
 		};
 		DDEFF2F6196C3DAC004ADA85 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DDEFF2CE196C3DAC004ADA85 /* Calendar */;
+			target = DDEFF2CE196C3DAC004ADA85 /* mxmum */;
 			targetProxy = DDEFF2F5196C3DAC004ADA85 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -472,15 +472,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Calendar/Calendar-Prefix.pch";
+				GCC_PREFIX_HEADER = "Calendar/mxmum-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					/Users/ChrisYang/Documents/mxmum/tapkulibrary/src,
 				);
-				INFOPLIST_FILE = "Calendar/Calendar-Info.plist";
+				INFOPLIST_FILE = "Calendar/mxmum-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = mxmum;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -491,15 +491,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Calendar/Calendar-Prefix.pch";
+				GCC_PREFIX_HEADER = "Calendar/mxmum-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					/Users/ChrisYang/Documents/mxmum/tapkulibrary/src,
 				);
-				INFOPLIST_FILE = "Calendar/Calendar-Info.plist";
+				INFOPLIST_FILE = "Calendar/mxmum-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = mxmum;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -519,8 +519,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "CalendarTests/CalendarTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "CalendarTests/mxmumTests-Info.plist";
+				PRODUCT_NAME = mxmumTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -537,8 +537,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Calendar/Calendar-Prefix.pch";
-				INFOPLIST_FILE = "CalendarTests/CalendarTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "CalendarTests/mxmumTests-Info.plist";
+				PRODUCT_NAME = mxmumTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -547,7 +547,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DDEFF2CA196C3DAC004ADA85 /* Build configuration list for PBXProject "Calendar" */ = {
+		DDEFF2CA196C3DAC004ADA85 /* Build configuration list for PBXProject "mxmum" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DDEFF2FF196C3DAC004ADA85 /* Debug */,
@@ -556,7 +556,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DDEFF301196C3DAC004ADA85 /* Build configuration list for PBXNativeTarget "Calendar" */ = {
+		DDEFF301196C3DAC004ADA85 /* Build configuration list for PBXNativeTarget "mxmum" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DDEFF302196C3DAC004ADA85 /* Debug */,
@@ -565,7 +565,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DDEFF304196C3DAC004ADA85 /* Build configuration list for PBXNativeTarget "CalendarTests" */ = {
+		DDEFF304196C3DAC004ADA85 /* Build configuration list for PBXNativeTarget "mxmumTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DDEFF305196C3DAC004ADA85 /* Debug */,

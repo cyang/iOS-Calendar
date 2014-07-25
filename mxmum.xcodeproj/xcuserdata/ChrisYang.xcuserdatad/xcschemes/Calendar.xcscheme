@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DDEFF2CE196C3DAC004ADA85"
                BuildableName = "Calendar.app"
-               BlueprintName = "Calendar"
-               ReferencedContainer = "container:Calendar.xcodeproj">
+               BlueprintName = "mxmum"
+               ReferencedContainer = "container:mxmum.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DDEFF2EF196C3DAC004ADA85"
                BuildableName = "CalendarTests.xctest"
-               BlueprintName = "CalendarTests"
-               ReferencedContainer = "container:Calendar.xcodeproj">
+               BlueprintName = "mxmumTests"
+               ReferencedContainer = "container:mxmum.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DDEFF2CE196C3DAC004ADA85"
             BuildableName = "Calendar.app"
-            BlueprintName = "Calendar"
-            ReferencedContainer = "container:Calendar.xcodeproj">
+            BlueprintName = "mxmum"
+            ReferencedContainer = "container:mxmum.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DDEFF2CE196C3DAC004ADA85"
             BuildableName = "Calendar.app"
-            BlueprintName = "Calendar"
-            ReferencedContainer = "container:Calendar.xcodeproj">
+            BlueprintName = "mxmum"
+            ReferencedContainer = "container:mxmum.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DDEFF2CE196C3DAC004ADA85"
             BuildableName = "Calendar.app"
-            BlueprintName = "Calendar"
-            ReferencedContainer = "container:Calendar.xcodeproj">
+            BlueprintName = "mxmum"
+            ReferencedContainer = "container:mxmum.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
