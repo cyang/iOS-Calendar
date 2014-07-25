@@ -11,6 +11,7 @@
 		DD3A91011982BF1B007AEBE4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0FB4D6197DB20700B89269 /* MapKit.framework */; };
 		DD3A91041982BFDC007AEBE4 /* Calendar.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3A91031982BFDC007AEBE4 /* Calendar.m */; };
 		DD3A91061982C0C0007AEBE4 /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3A90FB1982BEDD007AEBE4 /* libTapkuLibrary.a */; };
+		DD8182561982E8D40044D149 /* mxmum™ App Logo (Header).png in Resources */ = {isa = PBXBuildFile; fileRef = DD8182551982E8D40044D149 /* mxmum™ App Logo (Header).png */; };
 		DDE66AE8197748540032724F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE66AE7197748540032724F /* QuartzCore.framework */; };
 		DDEFF2D3196C3DAC004ADA85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDEFF2D2196C3DAC004ADA85 /* Foundation.framework */; };
 		DDEFF2D5196C3DAC004ADA85 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDEFF2D4196C3DAC004ADA85 /* CoreGraphics.framework */; };
@@ -67,6 +68,7 @@
 		DD3A90F41982BEDD007AEBE4 /* TapkuLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TapkuLibrary.xcodeproj; path = ../../tapkulibrary/src/TapkuLibrary.xcodeproj; sourceTree = "<group>"; };
 		DD3A91021982BFDC007AEBE4 /* Calendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calendar.h; sourceTree = "<group>"; };
 		DD3A91031982BFDC007AEBE4 /* Calendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calendar.m; sourceTree = "<group>"; };
+		DD8182551982E8D40044D149 /* mxmum™ App Logo (Header).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mxmum™ App Logo (Header).png"; path = "../../mxmum™ App Logo (Header).png"; sourceTree = "<group>"; };
 		DDE66AE7197748540032724F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DDEFF2CF196C3DAC004ADA85 /* Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDEFF2D2196C3DAC004ADA85 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -169,6 +171,7 @@
 				DDEFF2E1196C3DAC004ADA85 /* AppDelegate.h */,
 				DDEFF2E2196C3DAC004ADA85 /* AppDelegate.m */,
 				DDEFF2E4196C3DAC004ADA85 /* Main.storyboard */,
+				DD8182551982E8D40044D149 /* mxmum™ App Logo (Header).png */,
 				DD3A91021982BFDC007AEBE4 /* Calendar.h */,
 				DD3A91031982BFDC007AEBE4 /* Calendar.m */,
 				DDEFF2E7196C3DAC004ADA85 /* ViewController.h */,
@@ -313,6 +316,7 @@
 				DDEFF2EB196C3DAC004ADA85 /* Images.xcassets in Resources */,
 				DDF2BCCF197F48C200E2BECA /* anonymous.jpg in Resources */,
 				DD3A90F71982BEDD007AEBE4 /* TapkuLibrary.bundle in Resources */,
+				DD8182561982E8D40044D149 /* mxmum™ App Logo (Header).png in Resources */,
 				DDEFF2DD196C3DAC004ADA85 /* InfoPlist.strings in Resources */,
 				DDEFF2E6196C3DAC004ADA85 /* Main.storyboard in Resources */,
 			);
