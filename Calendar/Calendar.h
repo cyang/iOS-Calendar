@@ -6,9 +6,15 @@
 //  Copyright (c) 2014 mxmum. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <TapkuLibrary/TapkuLibrary.h>
+@import UIKit;
 
-@interface Calendar : UIViewController
+#pragma mark - CalendarMonthViewController
+@interface Calendar : TKCalendarMonthTableViewController
 
+@property (nonatomic,strong) NSMutableArray *dataArray;
+@property (nonatomic,strong) NSMutableDictionary *dataDictionary;
+
+- (void) generateRandomDataForStartDate:(NSDate*)start endDate:(NSDate*)end;
 
 @end
