@@ -224,7 +224,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ftH-lm-4fe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="left" id="NOy-ii-q9H">
+                <swipeGestureRecognizer delaysTouchesEnded="NO" direction="left" id="NOy-ii-q9H">
                     <connections>
                         <segue destination="qCZ-aG-D93" kind="modal" modalTransitionStyle="crossDissolve" id="9mE-W4-hwr"/>
                     </connections>
@@ -279,12 +279,12 @@
                     <navigationItem key="navigationItem" id="TIA-vH-tuL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AL2-aV-DIW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="left" id="0kN-nx-gar">
+                <swipeGestureRecognizer delaysTouchesEnded="NO" direction="left" id="0kN-nx-gar">
                     <connections>
                         <segue destination="zVO-QI-BgK" kind="modal" modalTransitionStyle="crossDissolve" id="6pK-EZ-dd2"/>
                     </connections>
                 </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="4Ob-b1-G2V">
+                <swipeGestureRecognizer delaysTouchesEnded="NO" direction="right" id="4Ob-b1-G2V">
                     <connections>
                         <segue destination="7GI-Q9-Rse" kind="modal" modalTransitionStyle="crossDissolve" id="BrO-Zh-NUb"/>
                     </connections>
@@ -355,7 +355,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="czQ-s0-PjR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="p4c-KM-kCD">
+                <swipeGestureRecognizer delaysTouchesEnded="NO" direction="right" id="p4c-KM-kCD">
                     <connections>
                         <segue destination="qCZ-aG-D93" kind="modal" modalTransitionStyle="crossDissolve" id="rbi-wK-Kbr"/>
                     </connections>
@@ -546,8 +546,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="rbi-wK-Kbr"/>
         <segue reference="ZAj-bs-TOU"/>
         <segue reference="RrB-z3-5XV"/>
-        <segue reference="rbi-wK-Kbr"/>
     </inferredMetricsTieBreakers>
 </document>
