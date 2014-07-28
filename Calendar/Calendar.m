@@ -24,6 +24,9 @@
 	[super viewDidLoad];
 	self.title = NSLocalizedString(@"Month Grid", @"");
 	[self.monthView selectDate:[NSDate date]];
+    CGRect myFrame = self.monthView.frame;
+    myFrame.origin.y = 64.0;
+    self.monthView.frame = myFrame;
 }
 
 
@@ -102,6 +105,8 @@
 	}
 	
 }
+
+
 
 
 @end
