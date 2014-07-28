@@ -31,7 +31,9 @@ float height;
     height = CGRectGetHeight(myCalendar);
     
     CGRect myTable = self.tableView.frame;
+    myTable.size.width += 10;
     myTable.origin.y = height + 64;
+    myTable.origin.x = -12.5;
     self.tableView.frame = myTable;
     
 }
