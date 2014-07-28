@@ -23,16 +23,17 @@ float height;
 #pragma mark View Lifecycle
 - (void) viewDidLoad{
 	[super viewDidLoad];
+
 	[self.monthView selectDate:[NSDate date]];
     CGRect myCalendar = self.monthView.frame;
-    myCalendar.origin.y = 64.0;
+    myCalendar.origin.y = 64.28;
     self.monthView.frame = myCalendar;
     height = CGRectGetHeight(myCalendar);
     
     CGRect myTable = self.tableView.frame;
-    myTable.size.width += 12;
+    myTable.size.width += 16;
     myTable.origin.y = height + 64;
-    myTable.origin.x = -12.5;
+    myTable.origin.x = -15.5;
     self.tableView.frame = myTable;
     
 }
@@ -89,17 +90,17 @@ float height;
 	
 	self.dataArray = [NSMutableArray array];
 	self.dataDictionary = [NSMutableDictionary dictionary];
+ 
 	
 	NSDate *d = start;
 	while(YES){
-		
 		NSInteger r = arc4random();
 		if(r % 3==1){
-			(self.dataDictionary)[d] = @[@"Item one",@"Item two"];
+			(self.dataDictionary)[d] = @[@" Item one",@" Item two"];
 			[self.dataArray addObject:@YES];
 			
 		}else if(r%4==1){
-			(self.dataDictionary)[d] = @[@"Item one"];
+			(self.dataDictionary)[d] = @[@" Item one"];
 			[self.dataArray addObject:@YES];
 			
 		}else
