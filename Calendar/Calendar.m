@@ -10,6 +10,7 @@
 
 #pragma mark - Calendar
 @implementation Calendar
+float height;
 
 - (NSUInteger) supportedInterfaceOrientations{
 	return  UIInterfaceOrientationMaskPortrait;
@@ -24,9 +25,15 @@
 	[super viewDidLoad];
 	self.title = NSLocalizedString(@"Month Grid", @"");
 	[self.monthView selectDate:[NSDate date]];
-    CGRect myFrame = self.monthView.frame;
-    myFrame.origin.y = 64.0;
-    self.monthView.frame = myFrame;
+    CGRect myCalendar = self.monthView.frame;
+    myCalendar.origin.y = 64.0;
+    self.monthView.frame = myCalendar;
+    height = CGRectGetHeight(myCalendar);
+    
+    CGRect myTable = self.tableView.frame;
+    myTable.origin.y = height + 64;
+    self.tableView.frame = myTable;
+    
 }
 
 
