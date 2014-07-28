@@ -23,7 +23,6 @@ float height;
 #pragma mark View Lifecycle
 - (void) viewDidLoad{
 	[super viewDidLoad];
-	self.title = NSLocalizedString(@"Month Grid", @"");
 	[self.monthView selectDate:[NSDate date]];
     CGRect myCalendar = self.monthView.frame;
     myCalendar.origin.y = 64.0;
