@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="qCZ-aG-D93">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Login screen-->
+        <!--Authetication View Controller - Login screen-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController title="Login screen" id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="Login screen" id="vXZ-lx-hvc" customClass="AutheticationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="97m-p2-l6f"/>
                         <viewControllerLayoutGuide type="bottom" id="VjM-ZZ-m9p"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS" customClass="view1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -34,6 +34,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="iYO-qp-CGL"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don't have an account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCW-Bg-h8l">
                                 <rect key="frame" x="79" y="287" width="163" height="21"/>
@@ -52,23 +55,40 @@
                                     <segue destination="0bO-K2-B2G" kind="modal" identifier="registerClicked" id="ZAj-bs-TOU"/>
                                 </connections>
                             </button>
+                            <navigationBar clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d9X-6K-cZ3">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="textShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mxmum™ App Header Logo (44x317)" translatesAutoresizingMaskIntoConstraints="NO" id="KpV-eu-6JC">
+                                <rect key="frame" x="85" y="31" width="158" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextFIeld" destination="hQh-Vf-L6v" id="veU-fk-01J"/>
+                        <outlet property="passwordTextField" destination="yTP-qB-zfe" id="NSC-gS-kuF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="545" y="-173"/>
         </scene>
-        <!--View Controller - Registration Screen-->
+        <!--Authetication View Controller - Registration Screen-->
         <scene sceneID="c9B-Dy-VU6">
             <objects>
-                <viewController title="Registration Screen" id="0bO-K2-B2G" sceneMemberID="viewController">
+                <viewController title="Registration Screen" id="0bO-K2-B2G" customClass="AutheticationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mu5-17-dGY"/>
                         <viewControllerLayoutGuide type="bottom" id="NHw-M8-zFg"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Bnl-dm-ro1">
+                    <view key="view" contentMode="scaleToFill" id="Bnl-dm-ro1" customClass="view2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -125,11 +145,14 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5u-mb-coq">
-                                <rect key="frame" x="231" y="518" width="69" height="30"/>
+                                <rect key="frame" x="245" y="518" width="55" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Next Step">
+                                <state key="normal" title="Confirm">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="setEmailAndPassword:" destination="0bO-K2-B2G" eventType="touchUpInside" id="o7q-GQ-7Uz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxC-wE-WAk">
                                 <rect key="frame" x="21" y="518" width="48" height="30"/>
@@ -141,6 +164,19 @@
                                     <segue destination="vXZ-lx-hvc" kind="modal" identifier="cancelClicked" id="HiD-4K-oAF"/>
                                 </connections>
                             </button>
+                            <navigationBar clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LGi-b2-UZ7">
+                                <rect key="frame" x="1" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="textShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mxmum™ App Header Logo (44x317)" translatesAutoresizingMaskIntoConstraints="NO" id="srn-GL-jTN">
+                                <rect key="frame" x="85" y="31" width="158" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -170,6 +206,10 @@
                             <constraint firstItem="Gpp-Hm-vWn" firstAttribute="leading" secondItem="uGQ-8i-XyN" secondAttribute="leading" id="xft-8H-YAk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="setEmailAddressTextField" destination="Gpp-Hm-vWn" id="ubr-8b-qpz"/>
+                        <outlet property="setPasswordTextField" destination="XYB-JT-hdY" id="CBv-mB-3Rd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BuR-FA-u91" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -250,6 +290,13 @@
                                 <rect key="frame" x="85" y="31" width="158" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Juc-Gr-vMw">
+                                <rect key="frame" x="278" y="31" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -316,9 +363,6 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="textShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </textAttributes>
-                                <items>
-                                    <navigationItem id="bo9-gr-nfs"/>
-                                </items>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mxmum™ App Header Logo (44x317)" translatesAutoresizingMaskIntoConstraints="NO" id="urc-Lc-Rfu">
                                 <rect key="frame" x="85" y="31" width="158" height="22"/>
@@ -357,6 +401,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="9mE-W4-hwr"/>
+        <segue reference="rbi-wK-Kbr"/>
     </inferredMetricsTieBreakers>
 </document>

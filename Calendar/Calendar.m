@@ -23,6 +23,7 @@ float height;
 #pragma mark View Lifecycle
 - (void) viewDidLoad{
 	[super viewDidLoad];
+    
 
 	[self.monthView selectDate:[NSDate date]];
     CGRect myCalendar = self.monthView.frame;
