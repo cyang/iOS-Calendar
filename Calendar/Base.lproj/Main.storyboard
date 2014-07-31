@@ -211,7 +211,6 @@
                         <outlet property="createPasswordTextField" destination="MXc-eH-4vo" id="LHZ-Nn-saI"/>
                         <outlet property="nameTextField" destination="rIz-IU-puG" id="PFl-fJ-x9x"/>
                         <outlet property="setEmailAddressTextField" destination="Gpp-Hm-vWn" id="ubr-8b-qpz"/>
-                        <outlet property="setPasswordTextField" destination="XYB-JT-hdY" id="CBv-mB-3Rd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BuR-FA-u91" userLabel="First Responder" sceneMemberID="firstResponder"/>
