@@ -8,12 +8,14 @@
 
 #import "ViewController.h"
 
-@interface AutheticationViewController : ViewController <UITextFieldDelegate>
+@interface AutheticationViewController : UIViewController <UITextFieldDelegate>
 
+@property (strong, nonatomic) IBOutlet UITextField *nameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *emailTextField;
 @property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (strong, nonatomic) IBOutlet UITextField *setEmailAddressTextField;
-@property (strong, nonatomic) IBOutlet UITextField *setPasswordTextField;
+@property (strong, nonatomic) IBOutlet UITextField *createPasswordTextField;
+@property (strong, nonatomic) IBOutlet UITextField *confirmPasswordTextField;
 
 - (IBAction)loginPressed:(id)sender;
 

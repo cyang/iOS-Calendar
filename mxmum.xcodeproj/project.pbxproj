@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		DD04E2EA198869B800073E1B /* AutheticationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD04E2E9198869B800073E1B /* AutheticationViewController.m */; };
-		DD04E2F0198882BE00073E1B /* HideKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD04E2EF198882BE00073E1B /* HideKeyboardViewController.m */; };
 		DD3A90F71982BEDD007AEBE4 /* TapkuLibrary.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DD3A90F31982BEDD007AEBE4 /* TapkuLibrary.bundle */; };
 		DD3A91011982BF1B007AEBE4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0FB4D6197DB20700B89269 /* MapKit.framework */; };
 		DD3A91041982BFDC007AEBE4 /* Calendar.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3A91031982BFDC007AEBE4 /* Calendar.m */; };
 		DD3A91061982C0C0007AEBE4 /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3A90FB1982BEDD007AEBE4 /* libTapkuLibrary.a */; };
 		DDB153E41989B3090085923D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB153E31989B3090085923D /* ViewController.m */; };
+		DDB153E71989CFEE0085923D /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB153E61989CFEE0085923D /* SearchViewController.m */; };
 		DDE66AE8197748540032724F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE66AE7197748540032724F /* QuartzCore.framework */; };
 		DDEFF2D3196C3DAC004ADA85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDEFF2D2196C3DAC004ADA85 /* Foundation.framework */; };
 		DDEFF2D5196C3DAC004ADA85 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDEFF2D4196C3DAC004ADA85 /* CoreGraphics.framework */; };
@@ -66,8 +66,6 @@
 /* Begin PBXFileReference section */
 		DD04E2E8198869B800073E1B /* AutheticationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutheticationViewController.h; sourceTree = "<group>"; };
 		DD04E2E9198869B800073E1B /* AutheticationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutheticationViewController.m; sourceTree = "<group>"; };
-		DD04E2EE198882BE00073E1B /* HideKeyboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HideKeyboardViewController.h; sourceTree = "<group>"; };
-		DD04E2EF198882BE00073E1B /* HideKeyboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HideKeyboardViewController.m; sourceTree = "<group>"; };
 		DD0FB4D6197DB20700B89269 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DD3A90F31982BEDD007AEBE4 /* TapkuLibrary.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TapkuLibrary.bundle; path = ../../tapkulibrary/src/TapkuLibrary.bundle; sourceTree = "<group>"; };
 		DD3A90F41982BEDD007AEBE4 /* TapkuLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TapkuLibrary.xcodeproj; path = ../../tapkulibrary/src/TapkuLibrary.xcodeproj; sourceTree = "<group>"; };
@@ -75,6 +73,8 @@
 		DD3A91031982BFDC007AEBE4 /* Calendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calendar.m; sourceTree = "<group>"; };
 		DDB153E21989B3090085923D /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
 		DDB153E31989B3090085923D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
+		DDB153E51989CFEE0085923D /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		DDB153E61989CFEE0085923D /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		DDE66AE7197748540032724F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		DDEFF2CF196C3DAC004ADA85 /* mxmum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mxmum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDEFF2D2196C3DAC004ADA85 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -181,8 +181,8 @@
 				DDF2BCCA197F43BE00E2BECA /* Profile.m */,
 				DD04E2E8198869B800073E1B /* AutheticationViewController.h */,
 				DD04E2E9198869B800073E1B /* AutheticationViewController.m */,
-				DD04E2EE198882BE00073E1B /* HideKeyboardViewController.h */,
-				DD04E2EF198882BE00073E1B /* HideKeyboardViewController.m */,
+				DDB153E51989CFEE0085923D /* SearchViewController.h */,
+				DDB153E61989CFEE0085923D /* SearchViewController.m */,
 				DDF2BCCE197F48C200E2BECA /* anonymous.jpg */,
 				DDEFF2E1196C3DAC004ADA85 /* AppDelegate.h */,
 				DDEFF2E2196C3DAC004ADA85 /* AppDelegate.m */,
@@ -352,12 +352,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDB153E41989B3090085923D /* ViewController.m in Sources */,
-				DD04E2F0198882BE00073E1B /* HideKeyboardViewController.m in Sources */,
 				DDF2BCCB197F43BE00E2BECA /* Profile.m in Sources */,
 				DD3A91041982BFDC007AEBE4 /* Calendar.m in Sources */,
 				DD04E2EA198869B800073E1B /* AutheticationViewController.m in Sources */,
 				DDEFF2E3196C3DAC004ADA85 /* AppDelegate.m in Sources */,
 				DDEFF2DF196C3DAC004ADA85 /* main.m in Sources */,
+				DDB153E71989CFEE0085923D /* SearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

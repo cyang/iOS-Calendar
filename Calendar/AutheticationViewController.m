@@ -13,8 +13,6 @@
     NSFileManager* fileManager;
     NSString* fullPath;
     NSFileHandle* fileHandle;
-    IBOutlet UIView *view1;
-    IBOutlet UIView *view2;
 }
 
 @end
@@ -36,13 +34,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    view2.hidden=YES;
     
     self.emailTextField.delegate = self;
     self.passwordTextField.delegate = self;
     self.setEmailAddressTextField.delegate = self;
-    self.setPasswordTextField.delegate = self;
-    
+    self.nameTextField.delegate = self;
+    self.createPasswordTextField.delegate = self;
+    self.confirmPasswordTextField.delegate = self;
     
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -62,7 +60,9 @@
     [self.emailTextField resignFirstResponder];
     [self.passwordTextField resignFirstResponder];
     [self.setEmailAddressTextField resignFirstResponder];
-    [self.setPasswordTextField resignFirstResponder];
+    [self.nameTextField resignFirstResponder];
+    [self.createPasswordTextField resignFirstResponder];
+    [self.confirmPasswordTextField resignFirstResponder];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -99,7 +99,7 @@
         [fileManager createFileAtPath:fullPath contents:nil attributes:nil];
     }
     
-    NSString *emailAndPasswordString = [NSString stringWithFormat:@"%@\n%@", self.setEmailAddressTextField.text, self.setPasswordTextField.text];
+    NSString *emailAndPasswordString = [NSString stringWithFormat:@"%@\n%@", self.setEmailAddressTextField.text, self.confirmPasswordTextField.text];
     fileHandle = [NSFileHandle fileHandleForUpdatingAtPath:fullPath];
     NSData *data;
     const char *bytesOfEmailAndPassword = [emailAndPasswordString UTF8String];

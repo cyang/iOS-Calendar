@@ -1,18 +1,18 @@
 //
-//  HideKeyboardViewController.m
+//  SearchViewController.m
 //  mxmum
 //
-//  Created by Christopher Yang on 7/29/14.
+//  Created by Christopher Yang on 7/30/14.
 //  Copyright (c) 2014 mxmum. All rights reserved.
 //
 
-#import "HideKeyboardViewController.h"
+#import "SearchViewController.h"
 
-@interface HideKeyboardViewController ()
+@interface SearchViewController ()
 
 @end
 
-@implementation HideKeyboardViewController
+@implementation SearchViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

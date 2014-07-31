@@ -72,7 +72,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="emailTextFIeld" destination="hQh-Vf-L6v" id="veU-fk-01J"/>
+                        <outlet property="emailTextField" destination="hQh-Vf-L6v" id="iiO-YZ-bWg"/>
                         <outlet property="passwordTextField" destination="yTP-qB-zfe" id="NSC-gS-kuF"/>
                     </connections>
                 </viewController>
@@ -207,6 +207,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="confirmPasswordTextField" destination="XYB-JT-hdY" id="ueQ-Rq-HaB"/>
+                        <outlet property="createPasswordTextField" destination="MXc-eH-4vo" id="LHZ-Nn-saI"/>
+                        <outlet property="nameTextField" destination="rIz-IU-puG" id="PFl-fJ-x9x"/>
                         <outlet property="setEmailAddressTextField" destination="Gpp-Hm-vWn" id="ubr-8b-qpz"/>
                         <outlet property="setPasswordTextField" destination="XYB-JT-hdY" id="CBv-mB-3Rd"/>
                     </connections>
@@ -215,10 +218,10 @@
             </objects>
             <point key="canvasLocation" x="125" y="484"/>
         </scene>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="doZ-Uw-d1s">
             <objects>
-                <viewController id="7GI-Q9-Rse" sceneMemberID="viewController">
+                <viewController id="7GI-Q9-Rse" customClass="SearchViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ykH-Et-urN"/>
                         <viewControllerLayoutGuide type="bottom" id="1T8-gk-QG2"/>
@@ -401,6 +404,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="rbi-wK-Kbr"/>
+        <segue reference="9mE-W4-hwr"/>
     </inferredMetricsTieBreakers>
 </document>
