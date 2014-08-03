@@ -93,21 +93,13 @@
 
 
 - (IBAction)setEmailAndPassword:(id)sender {
-    BOOL fileExist = [[NSFileManager defaultManager]fileExistsAtPath:fullPath];
-    if (fileExist) {
-        [fileManager createFileAtPath:fullPath contents:nil attributes:nil];
+    if ([_setEmailAddressTextField.text isEqualToString:@""] || [_createPasswordTextField.text isEqualToString:@""] || [_confirmPasswordTextField.text isEqualToString:@""]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"You must complete all fields" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+        [alert show];
     }
-    
-    NSString *emailAndPasswordString = [NSString stringWithFormat:@"%@\n%@", self.setEmailAddressTextField.text, self.confirmPasswordTextField.text];
-    fileHandle = [NSFileHandle fileHandleForUpdatingAtPath:fullPath];
-    NSData *data;
-    const char *bytesOfEmailAndPassword = [emailAndPasswordString UTF8String];
-    data = [NSData dataWithBytes:bytesOfEmailAndPassword length:strlen(bytesOfEmailAndPassword)];
-    [data writeToFile:fullPath atomically:YES];
-    
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Done Setting Email and Password" message:@"Completed" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-    [alert show];
-    
+    else {
+        [self checkPasswordsMatched];
+    }
 }
 
 - (IBAction)loginPressed:(id)sender {
@@ -144,6 +136,8 @@
         if ([emailFromFile isEqualToString:self.emailTextField.text] && [passwordFromFile isEqualToString:self.passwordTextField.text]) {
             Calendar *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"1"];
             [self presentViewController:vc animated:YES completion:nil];
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Success" message:@"You've logged in!" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+            [alert show];
         }
         else
         {
@@ -152,4 +146,38 @@
         }
     }
 }
+
+-(void)checkPasswordsMatched {
+    if ([_createPasswordTextField.text isEqualToString:_confirmPasswordTextField.text]) {
+        NSLog(@"Passwords match");
+        
+        
+        BOOL fileExist = [[NSFileManager defaultManager]fileExistsAtPath:fullPath];
+        if (fileExist) {
+            [fileManager createFileAtPath:fullPath contents:nil attributes:nil];
+        }
+        
+        NSString *emailAndPasswordString = [NSString stringWithFormat:@"%@\n%@", self.setEmailAddressTextField.text, self.confirmPasswordTextField.text];
+        fileHandle = [NSFileHandle fileHandleForUpdatingAtPath:fullPath];
+        NSData *data;
+        const char *bytesOfEmailAndPassword = [emailAndPasswordString UTF8String];
+        data = [NSData dataWithBytes:bytesOfEmailAndPassword length:strlen(bytesOfEmailAndPassword)];
+        [data writeToFile:fullPath atomically:YES];
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Done Setting Email and Password" message:@"Completed" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+        [alert show];
+        
+        AutheticationViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"2"];
+        [self presentViewController:vc animated:YES completion:nil];
+        
+    }
+    else {
+        NSLog(@"Passwords don't match");
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Your entered passwords do not match" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+        
+        [alert show];
+    }
+}
+
 @end

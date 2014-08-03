@@ -82,7 +82,7 @@
 		DDEFF2D6196C3DAC004ADA85 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DDEFF2DA196C3DAC004ADA85 /* mxmum-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "mxmum-Info.plist"; sourceTree = "<group>"; };
 		DDEFF2DC196C3DAC004ADA85 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		DDEFF2DE196C3DAC004ADA85 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DDEFF2DE196C3DAC004ADA85 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; wrapsLines = 1; };
 		DDEFF2E0196C3DAC004ADA85 /* mxmum-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mxmum-Prefix.pch"; sourceTree = "<group>"; };
 		DDEFF2E1196C3DAC004ADA85 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DDEFF2E2196C3DAC004ADA85 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
