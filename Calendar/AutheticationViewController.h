@@ -10,12 +10,12 @@
 
 @interface AutheticationViewController : UIViewController <UITextFieldDelegate>
 
-@property (strong, nonatomic) IBOutlet UITextField *nameTextField;
-@property (strong, nonatomic) IBOutlet UITextField *emailTextField;
-@property (strong, nonatomic) IBOutlet UITextField *passwordTextField;
-@property (strong, nonatomic) IBOutlet UITextField *setEmailAddressTextField;
-@property (strong, nonatomic) IBOutlet UITextField *createPasswordTextField;
-@property (strong, nonatomic) IBOutlet UITextField *confirmPasswordTextField;
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UITextField *setEmailAddressTextField;
+@property (weak, nonatomic) IBOutlet UITextField *createPasswordTextField;
+@property (weak, nonatomic) IBOutlet UITextField *confirmPasswordTextField;
 
 - (IBAction)loginPressed:(id)sender;
 

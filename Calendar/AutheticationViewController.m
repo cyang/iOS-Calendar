@@ -7,6 +7,8 @@
 //
 
 #import "AutheticationViewController.h"
+#import "Calendar.h"
+#import "ViewController.h"
 
 @interface AutheticationViewController ()
 {
@@ -90,9 +92,6 @@
 */
 
 
-- (IBAction)loginPressed:(id)sender {
-}
-
 - (IBAction)setEmailAndPassword:(id)sender {
     BOOL fileExist = [[NSFileManager defaultManager]fileExistsAtPath:fullPath];
     if (fileExist) {
@@ -110,5 +109,47 @@
     [alert show];
     
 }
-    
+
+- (IBAction)loginPressed:(id)sender {
+    BOOL fileExist = [[NSFileManager defaultManager]fileExistsAtPath:fullPath];
+    if (!fileExist) {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Haven't set email and passwod" message:@"Please set email and password" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+        [alert show];
+    }
+    else
+    {
+        fileHandle = [NSFileHandle fileHandleForUpdatingAtPath:fullPath];
+        NSString *stringFromFile = [NSString stringWithContentsOfFile:fullPath encoding:NSASCIIStringEncoding error:nil];
+        
+        const char *charsFromFile = [stringFromFile UTF8String];
+        
+        NSString *emailFromFile = [[NSString alloc]init];
+        NSString *passwordFromFile = [[NSString alloc]init];
+        
+        int count = 0;
+        for (int i = 0; i < strlen(charsFromFile); i++) {
+            if (charsFromFile[i]=='\n') {
+                ++count;
+            }
+            else if(count == 0) // append characters to usernamefromfile
+            {
+                emailFromFile = [emailFromFile stringByAppendingString:[NSString stringWithFormat:@"%c", charsFromFile[i]]];
+            }
+            else    // append characters to passwordfromfile
+            {
+                passwordFromFile = [passwordFromFile stringByAppendingString:[NSString stringWithFormat:@"%c", charsFromFile[i]]];
+            }
+        }
+        
+        if ([emailFromFile isEqualToString:self.emailTextField.text] && [passwordFromFile isEqualToString:self.passwordTextField.text]) {
+            Calendar *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"1"];
+            [self presentViewController:vc animated:YES completion:nil];
+        }
+        else
+        {
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Mismatch" message:@"Email or password is incorrect" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+            [alert show];
+        }
+    }
+}
 @end

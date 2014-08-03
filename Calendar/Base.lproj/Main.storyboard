@@ -12,7 +12,7 @@
                         <viewControllerLayoutGuide type="top" id="97m-p2-l6f"/>
                         <viewControllerLayoutGuide type="bottom" id="VjM-ZZ-m9p"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS" customClass="view1">
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -88,7 +88,7 @@
                         <viewControllerLayoutGuide type="top" id="mu5-17-dGY"/>
                         <viewControllerLayoutGuide type="bottom" id="NHw-M8-zFg"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Bnl-dm-ro1" customClass="view2">
+                    <view key="view" contentMode="scaleToFill" id="Bnl-dm-ro1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -270,7 +270,7 @@
         <!--Calendar-->
         <scene sceneID="VsS-10-noK">
             <objects>
-                <viewController id="qCZ-aG-D93" customClass="Calendar" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qCZ-aG-D93" customClass="Calendar" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dsc-6Y-LG5"/>
                         <viewControllerLayoutGuide type="bottom" id="fdS-Jw-McU"/>
