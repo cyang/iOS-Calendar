@@ -12,6 +12,7 @@
 		DD3A91011982BF1B007AEBE4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0FB4D6197DB20700B89269 /* MapKit.framework */; };
 		DD3A91041982BFDC007AEBE4 /* Calendar.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3A91031982BFDC007AEBE4 /* Calendar.m */; };
 		DD3A91061982C0C0007AEBE4 /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3A90FB1982BEDD007AEBE4 /* libTapkuLibrary.a */; };
+		DDAF7DF6198FDFAA00F23E0A /* SearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAF7DF5198FDFA900F23E0A /* SearchBar.m */; };
 		DDB153E41989B3090085923D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB153E31989B3090085923D /* ViewController.m */; };
 		DDB153E71989CFEE0085923D /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB153E61989CFEE0085923D /* SearchViewController.m */; };
 		DDE66AE8197748540032724F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE66AE7197748540032724F /* QuartzCore.framework */; };
@@ -71,6 +72,8 @@
 		DD3A90F41982BEDD007AEBE4 /* TapkuLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TapkuLibrary.xcodeproj; path = ../../tapkulibrary/src/TapkuLibrary.xcodeproj; sourceTree = "<group>"; };
 		DD3A91021982BFDC007AEBE4 /* Calendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calendar.h; sourceTree = "<group>"; };
 		DD3A91031982BFDC007AEBE4 /* Calendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calendar.m; sourceTree = "<group>"; };
+		DDAF7DF4198FDFA900F23E0A /* SearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchBar.h; sourceTree = "<group>"; };
+		DDAF7DF5198FDFA900F23E0A /* SearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchBar.m; sourceTree = "<group>"; };
 		DDB153E21989B3090085923D /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
 		DDB153E31989B3090085923D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
 		DDB153E51989CFEE0085923D /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
@@ -187,6 +190,8 @@
 				DDEFF2E1196C3DAC004ADA85 /* AppDelegate.h */,
 				DDEFF2E2196C3DAC004ADA85 /* AppDelegate.m */,
 				DDEFF2E4196C3DAC004ADA85 /* Main.storyboard */,
+				DDAF7DF4198FDFA900F23E0A /* SearchBar.h */,
+				DDAF7DF5198FDFA900F23E0A /* SearchBar.m */,
 				DD3A91021982BFDC007AEBE4 /* Calendar.h */,
 				DD3A91031982BFDC007AEBE4 /* Calendar.m */,
 				DDB153E21989B3090085923D /* ViewController.h */,
@@ -352,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDB153E41989B3090085923D /* ViewController.m in Sources */,
+				DDAF7DF6198FDFAA00F23E0A /* SearchBar.m in Sources */,
 				DDF2BCCB197F43BE00E2BECA /* Profile.m in Sources */,
 				DD3A91041982BFDC007AEBE4 /* Calendar.m in Sources */,
 				DD04E2EA198869B800073E1B /* AutheticationViewController.m in Sources */,
