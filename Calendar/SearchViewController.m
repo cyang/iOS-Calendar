@@ -10,6 +10,11 @@
 
 @interface SearchViewController ()
 
+@property (strong, nonatomic) NSArray *array;
+@property (strong, nonatomic) NSArray *searchResults;
+
+
+
 @end
 
 @implementation SearchViewController
@@ -26,7 +31,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.array = [[NSArray alloc] initWithObjects:@"Apple", @"Samsung", @"HTC", @"Motorola", @"LG", nil];
+    self.searchResults = [[NSArray alloc] init];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,15 +42,68 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+#pragma Table View Methods
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        return  self.searchResults.count;
+    }
+    else
+    {
+        return [self.array count];
+    }
+    
+    //return [self.array count];
+    
 }
-*/
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellID = @"cellID";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+    }
+    
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        cell.textLabel.text = [self.searchResults objectAtIndex:indexPath.row];
+    }
+    else
+    {
+        cell.textLabel.text = [self.array objectAtIndex:indexPath.row];
+    }
+    
+    //cell.textLabel.text = [self.array objectAtIndex:indexPath.row];
+    return  cell;
+}
+
+#pragma Search Methods
+
+- (void) filterContentForSearchText:(NSString *)searchText scope:(NSString *)scope
+{
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF beginswith[c] %@", searchText];
+    self.searchResults = [self.array filteredArrayUsingPredicate:predicate];
+}
+
+- (BOOL) searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    [self filterContentForSearchText:searchString scope:[[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
+    return YES;
+}
+
+
+
+
 
 @end
+
+
+
+
+
+
+
+
+
