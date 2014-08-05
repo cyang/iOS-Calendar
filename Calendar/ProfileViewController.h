@@ -1,5 +1,5 @@
 //
-//  Profile.h
+//  ProfileViewController.h
 //  Calendar
 //
 //  Created by Christopher Yang on 7/22/14.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Profile : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface ProfileViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
@@ -17,5 +17,6 @@
 - (IBAction)selectPhoto:(UIButton *)sender;
 
 @property (strong, nonatomic) IBOutlet UILabel *fullName;
+- (IBAction)confirm:(UIButton *)sender;
 
 @end

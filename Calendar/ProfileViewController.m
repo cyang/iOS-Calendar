@@ -1,18 +1,18 @@
 //
-//  Profile.m
+//  ProfileViewController.m
 //  Calendar
 //
 //  Created by Christopher Yang on 7/22/14.
 //  Copyright (c) 2014 mxmum. All rights reserved.
 //
 
-#import "Profile.h"
+#import "ProfileViewController.h"
 
-@interface Profile ()
+@interface ProfileViewController ()
 
 @end
 
-@implementation Profile
+@implementation ProfileViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -69,4 +69,9 @@
     
 }
 
+- (IBAction)confirm:(UIButton *)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"Saved changes" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+    
+    [alert show];
+}
 @end

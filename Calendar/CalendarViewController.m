@@ -1,15 +1,15 @@
 //
-//  Calendar.m
-//  Calendar
+//  CalendarViewController.m
+//  CalendarViewController
 //
 //  Created by Christopher Yang on 7/25/14.
 //  Copyright (c) 2014 mxmum. All rights reserved.
 //
-#import "Calendar.h"
+#import "CalendarViewController.h"
 
 
 #pragma mark - Calendar
-@implementation Calendar
+@implementation CalendarViewController
 float height;
 
 - (NSUInteger) supportedInterfaceOrientations{

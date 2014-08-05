@@ -1,6 +1,6 @@
 //
-//  Calendar.h
-//  Calendar
+//  CalendarViewController.h
+//  CalendarViewController
 //
 //  Created by Christopher Yang on 7/25/14.
 //  Copyright (c) 2014 mxmum. All rights reserved.
@@ -10,7 +10,7 @@
 @import UIKit;
 
 #pragma mark - CalendarMonthViewController
-@interface Calendar : TKCalendarMonthTableViewController
+@interface CalendarViewController : TKCalendarMonthTableViewController
 
 @property (nonatomic,strong) NSMutableArray *dataArray;
 @property (nonatomic,strong) NSMutableDictionary *dataDictionary;

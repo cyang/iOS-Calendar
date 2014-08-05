@@ -10,4 +10,7 @@
 
 @interface SearchViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UISearchDisplayDelegate>
 
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
 @end

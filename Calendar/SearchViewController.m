@@ -31,7 +31,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.array = [[NSArray alloc] initWithObjects:@"Apple", @"Samsung", @"HTC", @"Motorola", @"LG", nil];
+    self.array = [[NSArray alloc] initWithObjects:@"Artem", @"Polina", @"Jenny", @"Chris", @"mxmum", @"mxmum2" , nil];
     self.searchResults = [[NSArray alloc] init];
     
 }

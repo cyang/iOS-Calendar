@@ -7,7 +7,7 @@
 //
 
 #import "AutheticationViewController.h"
-#import "Calendar.h"
+#import "CalendarViewController.h"
 #import "ViewController.h"
 
 @interface AutheticationViewController ()
@@ -20,8 +20,6 @@
 @end
 
 @implementation AutheticationViewController
-
-
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -93,7 +91,7 @@
 
 
 - (IBAction)setEmailAndPassword:(id)sender {
-    if ([_setEmailAddressTextField.text isEqualToString:@""] || [_createPasswordTextField.text isEqualToString:@""] || [_confirmPasswordTextField.text isEqualToString:@""]) {
+    if ([_setEmailAddressTextField.text isEqualToString:@""] || [_createPasswordTextField.text isEqualToString:@""] || [_confirmPasswordTextField.text isEqualToString:@""] || [_nameTextField.text isEqualToString:@""]){
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"You must complete all fields" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
         [alert show];
     }
@@ -134,7 +132,7 @@
         }
         
         if ([emailFromFile isEqualToString:self.emailTextField.text] && [passwordFromFile isEqualToString:self.passwordTextField.text]) {
-            Calendar *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"1"];
+            CalendarViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"1"];
             [self presentViewController:vc animated:YES completion:nil];
             UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Success" message:@"You've logged in!" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
             [alert show];
