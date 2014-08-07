@@ -12,6 +12,14 @@
 		DD3A91011982BF1B007AEBE4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0FB4D6197DB20700B89269 /* MapKit.framework */; };
 		DD3A91041982BFDC007AEBE4 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3A91031982BFDC007AEBE4 /* CalendarViewController.m */; };
 		DD3A91061982C0C0007AEBE4 /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3A90FB1982BEDD007AEBE4 /* libTapkuLibrary.a */; };
+		DD92FBCA199302F10042F011 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92FBC9199302F10042F011 /* AudioToolbox.framework */; };
+		DD92FBCD199302F90042F011 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92FBCC199302F90042F011 /* CFNetwork.framework */; };
+		DD92FBCF1993030B0042F011 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92FBCE1993030B0042F011 /* CoreLocation.framework */; };
+		DD92FBD1199303120042F011 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92FBD0199303120042F011 /* libz.dylib */; };
+		DD92FBD3199303190042F011 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92FBD2199303190042F011 /* MobileCoreServices.framework */; };
+		DD92FBD5199303240042F011 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92FBD4199303240042F011 /* Security.framework */; };
+		DD92FBD9199303340042F011 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92FBD8199303340042F011 /* SystemConfiguration.framework */; };
+		DD92FC2F199306370042F011 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD2BD5FB1991BD290096D08C /* Parse.framework */; };
 		DDB153E41989B3090085923D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB153E31989B3090085923D /* ViewController.m */; };
 		DDB153E71989CFEE0085923D /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB153E61989CFEE0085923D /* SearchViewController.m */; };
 		DDE66AE8197748540032724F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE66AE7197748540032724F /* QuartzCore.framework */; };
@@ -67,10 +75,27 @@
 		DD04E2E8198869B800073E1B /* AutheticationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutheticationViewController.h; sourceTree = "<group>"; };
 		DD04E2E9198869B800073E1B /* AutheticationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutheticationViewController.m; sourceTree = "<group>"; };
 		DD0FB4D6197DB20700B89269 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DD2BD5FB1991BD290096D08C /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		DD3A90F31982BEDD007AEBE4 /* TapkuLibrary.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TapkuLibrary.bundle; path = ../../tapkulibrary/src/TapkuLibrary.bundle; sourceTree = "<group>"; };
 		DD3A90F41982BEDD007AEBE4 /* TapkuLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TapkuLibrary.xcodeproj; path = ../../tapkulibrary/src/TapkuLibrary.xcodeproj; sourceTree = "<group>"; };
 		DD3A91021982BFDC007AEBE4 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
 		DD3A91031982BFDC007AEBE4 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		DD92FBC9199302F10042F011 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		DD92FBCC199302F90042F011 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		DD92FBCE1993030B0042F011 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DD92FBD0199303120042F011 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		DD92FBD2199303190042F011 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		DD92FBD4199303240042F011 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		DD92FBD61993032C0042F011 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		DD92FBD8199303340042F011 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DD92FC30199306DC0042F011 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		DD92FC32199306E10042F011 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		DD92FC3419930B140042F011 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		DD92FC3619930BB50042F011 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		DD92FC3819930BD60042F011 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		DD92FC3A19930C220042F011 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		DD92FC3C19930C3E0042F011 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		DD92FC3E19930C550042F011 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		DDB153E21989B3090085923D /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
 		DDB153E31989B3090085923D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
 		DDB153E51989CFEE0085923D /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
@@ -103,10 +128,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD92FC2F199306370042F011 /* Parse.framework in Frameworks */,
+				DD92FBCD199302F90042F011 /* CFNetwork.framework in Frameworks */,
+				DD92FBD9199303340042F011 /* SystemConfiguration.framework in Frameworks */,
+				DD92FBD5199303240042F011 /* Security.framework in Frameworks */,
+				DD92FBD3199303190042F011 /* MobileCoreServices.framework in Frameworks */,
+				DD92FBD1199303120042F011 /* libz.dylib in Frameworks */,
+				DD92FBCF1993030B0042F011 /* CoreLocation.framework in Frameworks */,
+				DDEFF2D5196C3DAC004ADA85 /* CoreGraphics.framework in Frameworks */,
+				DD92FBCA199302F10042F011 /* AudioToolbox.framework in Frameworks */,
 				DD3A91061982C0C0007AEBE4 /* libTapkuLibrary.a in Frameworks */,
 				DD3A91011982BF1B007AEBE4 /* MapKit.framework in Frameworks */,
 				DDE66AE8197748540032724F /* QuartzCore.framework in Frameworks */,
-				DDEFF2D5196C3DAC004ADA85 /* CoreGraphics.framework in Frameworks */,
 				DDEFF2D7196C3DAC004ADA85 /* UIKit.framework in Frameworks */,
 				DDEFF2D3196C3DAC004ADA85 /* Foundation.framework in Frameworks */,
 			);
@@ -164,6 +197,23 @@
 		DDEFF2D1196C3DAC004ADA85 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DD92FC3E19930C550042F011 /* Social.framework */,
+				DD92FC3C19930C3E0042F011 /* CoreMotion.framework */,
+				DD92FC3A19930C220042F011 /* AssetsLibrary.framework */,
+				DD92FC3819930BD60042F011 /* Accounts.framework */,
+				DD92FC3619930BB50042F011 /* MediaPlayer.framework */,
+				DD92FC3419930B140042F011 /* CoreMedia.framework */,
+				DD92FC32199306E10042F011 /* AVFoundation.framework */,
+				DD92FC30199306DC0042F011 /* AddressBook.framework */,
+				DD92FBD8199303340042F011 /* SystemConfiguration.framework */,
+				DD92FBD61993032C0042F011 /* StoreKit.framework */,
+				DD92FBD4199303240042F011 /* Security.framework */,
+				DD92FBD2199303190042F011 /* MobileCoreServices.framework */,
+				DD92FBD0199303120042F011 /* libz.dylib */,
+				DD92FBCE1993030B0042F011 /* CoreLocation.framework */,
+				DD92FBCC199302F90042F011 /* CFNetwork.framework */,
+				DD92FBC9199302F10042F011 /* AudioToolbox.framework */,
+				DD2BD5FB1991BD290096D08C /* Parse.framework */,
 				DD0FB4D6197DB20700B89269 /* MapKit.framework */,
 				DDE66AE7197748540032724F /* QuartzCore.framework */,
 				DDEFF2D2196C3DAC004ADA85 /* Foundation.framework */,
@@ -487,6 +537,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Calendar/mxmum-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -496,7 +550,7 @@
 				);
 				INFOPLIST_FILE = "Calendar/mxmum-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = mxmum;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -508,6 +562,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Calendar/mxmum-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -517,7 +575,7 @@
 				);
 				INFOPLIST_FILE = "Calendar/mxmum-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = mxmum;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
