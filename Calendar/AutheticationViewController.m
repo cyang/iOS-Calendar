@@ -12,6 +12,8 @@
 
 @interface AutheticationViewController ()
 
+
+
 @end
 
 @implementation AutheticationViewController
@@ -160,7 +162,6 @@
         }
     }];
     return myName;
-
 }
 
 

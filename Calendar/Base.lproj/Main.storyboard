@@ -446,7 +446,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="16p-41-t3A"/>
                     <connections>
-                        <outlet property="fullName" destination="nFD-Qd-Q23" id="SuG-Rv-2UZ"/>
+                        <outlet property="fullNameLabel" destination="nFD-Qd-Q23" id="571-yI-0WB"/>
                         <outlet property="imageView" destination="sTS-ZM-ee3" id="02J-Ou-2st"/>
                     </connections>
                 </viewController>
@@ -532,7 +532,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="YIT-bB-SxK"/>
+        <segue reference="rbi-wK-Kbr"/>
         <segue reference="6pK-EZ-dd2"/>
     </inferredMetricsTieBreakers>
 </document>

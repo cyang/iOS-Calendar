@@ -17,7 +17,7 @@
 
 - (IBAction)selectPhoto:(UIButton *)sender;
 
-@property (strong, nonatomic) IBOutlet UILabel *fullName;
+@property (weak, nonatomic) IBOutlet UILabel *fullNameLabel;
 - (IBAction)confirm:(UIButton *)sender;
 - (IBAction)logoutPressed:(id)sender;
 

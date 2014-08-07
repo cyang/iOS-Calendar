@@ -22,6 +22,8 @@
 
 - (IBAction)loginPressed:(id)sender;
 
+- (NSString *)registerNewUser;
+
 - (IBAction)setEmailAndPassword:(id)sender;
 
 
