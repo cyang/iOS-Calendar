@@ -7,6 +7,7 @@
 //
 
 #import "ProfileViewController.h"
+#import "AutheticationViewController.h"
 
 @interface ProfileViewController ()
 
@@ -73,5 +74,12 @@
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"Saved changes" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
     
     [alert show];
+}
+
+- (IBAction)logoutPressed:(id)sender {
+    [PFUser logOut];
+    AutheticationViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"2"];
+    [self presentViewController:vc animated:YES completion:nil];
+    
 }
 @end

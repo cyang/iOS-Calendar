@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface ProfileViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -18,5 +19,7 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *fullName;
 - (IBAction)confirm:(UIButton *)sender;
+- (IBAction)logoutPressed:(id)sender;
+
 
 @end

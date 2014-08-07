@@ -98,13 +98,14 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="emailTextField" destination="hQh-Vf-L6v" id="iiO-YZ-bWg"/>
-                        <outlet property="passwordTextField" destination="yTP-qB-zfe" id="NSC-gS-kuF"/>
+                        <outlet property="loginEmailTextField" destination="hQh-Vf-L6v" id="cZQ-a1-Yr4"/>
+                        <outlet property="loginPasswordTextField" destination="yTP-qB-zfe" id="hbd-vV-PUd"/>
+                        <segue destination="qCZ-aG-D93" kind="modal" identifier="login" id="YIT-bB-SxK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-203" y="489"/>
+            <point key="canvasLocation" x="-455" y="457"/>
         </scene>
         <!--Authetication View Controller - Registration Screen-->
         <scene sceneID="c9B-Dy-VU6">
@@ -249,7 +250,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BuR-FA-u91" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="123" y="489"/>
+            <point key="canvasLocation" x="-129" y="457"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="doZ-Uw-d1s">
@@ -321,12 +322,12 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="614" y="489"/>
+            <point key="canvasLocation" x="586" y="489"/>
         </scene>
         <!--Calendar View Controller-->
         <scene sceneID="VsS-10-noK">
             <objects>
-                <viewController storyboardIdentifier="1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qCZ-aG-D93" customClass="CalendarViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Calendar" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qCZ-aG-D93" customClass="CalendarViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dsc-6Y-LG5"/>
                         <viewControllerLayoutGuide type="bottom" id="fdS-Jw-McU"/>
@@ -378,7 +379,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="939" y="489"/>
+            <point key="canvasLocation" x="923" y="489"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="J9n-Ce-z96">
@@ -433,7 +434,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="modal" id="ubU-Ez-rH8"/>
+                                    <action selector="logoutPressed:" destination="zVO-QI-BgK" eventType="touchUpInside" id="TgI-jd-jCZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -531,8 +532,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="rbi-wK-Kbr"/>
-        <segue reference="Lkx-1F-QNi"/>
-        <segue reference="ubU-Ez-rH8"/>
+        <segue reference="YIT-bB-SxK"/>
+        <segue reference="6pK-EZ-dd2"/>
     </inferredMetricsTieBreakers>
 </document>

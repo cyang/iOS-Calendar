@@ -35,16 +35,15 @@
 {
     [super viewDidLoad];
     
-    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-    testObject[@"foo"] = @"bar";
-    [testObject saveInBackground];
-    
     self.emailTextField.delegate = self;
     self.passwordTextField.delegate = self;
     self.nameTextField.delegate = self;
     self.confirmPasswordTextField.delegate = self;
     
+    self.loginEmailTextField.delegate = self;
+    self.loginPasswordTextField.delegate = self;
     
+    /*
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *filePath = [paths objectAtIndex:0];
     
@@ -54,7 +53,7 @@
     
     [fileManager changeCurrentDirectoryPath:filePath];
     fullPath = [NSString stringWithFormat:@"%@", [filePath stringByAppendingPathComponent:@"Key.txt"]];
-     
+    */ 
 }
 
 
@@ -63,6 +62,9 @@
     [self.passwordTextField resignFirstResponder];
     [self.nameTextField resignFirstResponder];
     [self.confirmPasswordTextField resignFirstResponder];
+    
+    [self.loginEmailTextField resignFirstResponder];
+    [self.loginPasswordTextField resignFirstResponder];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -161,7 +163,25 @@
 
 
 - (IBAction)loginPressed:(id)sender {
-    BOOL fileExist = [[NSFileManager defaultManager]fileExistsAtPath:fullPath];
+    [PFUser logInWithUsernameInBackground:_loginEmailTextField.text password:_loginPasswordTextField.text block:^(PFUser *user, NSError *error) {
+        if (!error) {
+            NSLog(@"Login user");
+            //CalendarViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"Calendar"];
+            //[self presentViewController:vc animated:YES completion:nil];
+            
+            [self performSegueWithIdentifier:@"login" sender:self];
+            
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Success" message:@"You've logged in!" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+            [alert show];
+        }
+        else {
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Mismatch" message:@"Email or password is incorrect" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+            [alert show];
+        }
+    }];
+    
+    
+    /*BOOL fileExist = [[NSFileManager defaultManager]fileExistsAtPath:fullPath];
     if (!fileExist) {
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Haven't set email and passwod" message:@"Please set email and password" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
         [alert show];
@@ -202,7 +222,7 @@
             UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Mismatch" message:@"Email or password is incorrect" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
             [alert show];
         }
-    }
+    }*/
 }
 
 
