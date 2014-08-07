@@ -20,6 +20,16 @@
 		DD92FBD5199303240042F011 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92FBD4199303240042F011 /* Security.framework */; };
 		DD92FBD9199303340042F011 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92FBD8199303340042F011 /* SystemConfiguration.framework */; };
 		DD92FC2F199306370042F011 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD2BD5FB1991BD290096D08C /* Parse.framework */; };
+		DD92FC4619932F8B0042F011 /* FBMissingSymbols.m in Sources */ = {isa = PBXBuildFile; fileRef = DD92FC4519932F8A0042F011 /* FBMissingSymbols.m */; };
+		DD92FC471993301B0042F011 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92FC30199306DC0042F011 /* AddressBook.framework */; };
+		DD92FC48199330220042F011 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92FC32199306E10042F011 /* AVFoundation.framework */; };
+		DD92FC491993302C0042F011 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92FC3419930B140042F011 /* CoreMedia.framework */; };
+		DD92FC4A199330340042F011 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92FC3619930BB50042F011 /* MediaPlayer.framework */; };
+		DD92FC4B1993303D0042F011 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92FC3819930BD60042F011 /* Accounts.framework */; };
+		DD92FC4C199330440042F011 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92FC3A19930C220042F011 /* AssetsLibrary.framework */; };
+		DD92FC4D199330550042F011 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92FC3C19930C3E0042F011 /* CoreMotion.framework */; };
+		DD92FC4E1993305A0042F011 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92FBD61993032C0042F011 /* StoreKit.framework */; };
+		DD92FC4F199330610042F011 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92FC3E19930C550042F011 /* Social.framework */; };
 		DDB153E41989B3090085923D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB153E31989B3090085923D /* ViewController.m */; };
 		DDB153E71989CFEE0085923D /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB153E61989CFEE0085923D /* SearchViewController.m */; };
 		DDE66AE8197748540032724F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE66AE7197748540032724F /* QuartzCore.framework */; };
@@ -96,6 +106,7 @@
 		DD92FC3A19930C220042F011 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		DD92FC3C19930C3E0042F011 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		DD92FC3E19930C550042F011 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		DD92FC4519932F8A0042F011 /* FBMissingSymbols.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBMissingSymbols.m; sourceTree = "<group>"; };
 		DDB153E21989B3090085923D /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
 		DDB153E31989B3090085923D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
 		DDB153E51989CFEE0085923D /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
@@ -128,13 +139,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD92FC4F199330610042F011 /* Social.framework in Frameworks */,
+				DD92FC4E1993305A0042F011 /* StoreKit.framework in Frameworks */,
+				DD92FC4D199330550042F011 /* CoreMotion.framework in Frameworks */,
+				DD92FBCF1993030B0042F011 /* CoreLocation.framework in Frameworks */,
+				DD92FC4C199330440042F011 /* AssetsLibrary.framework in Frameworks */,
+				DD92FC4B1993303D0042F011 /* Accounts.framework in Frameworks */,
+				DD92FC4A199330340042F011 /* MediaPlayer.framework in Frameworks */,
+				DD92FC491993302C0042F011 /* CoreMedia.framework in Frameworks */,
+				DD92FC48199330220042F011 /* AVFoundation.framework in Frameworks */,
+				DD92FC471993301B0042F011 /* AddressBook.framework in Frameworks */,
 				DD92FC2F199306370042F011 /* Parse.framework in Frameworks */,
 				DD92FBCD199302F90042F011 /* CFNetwork.framework in Frameworks */,
 				DD92FBD9199303340042F011 /* SystemConfiguration.framework in Frameworks */,
 				DD92FBD5199303240042F011 /* Security.framework in Frameworks */,
 				DD92FBD3199303190042F011 /* MobileCoreServices.framework in Frameworks */,
 				DD92FBD1199303120042F011 /* libz.dylib in Frameworks */,
-				DD92FBCF1993030B0042F011 /* CoreLocation.framework in Frameworks */,
 				DDEFF2D5196C3DAC004ADA85 /* CoreGraphics.framework in Frameworks */,
 				DD92FBCA199302F10042F011 /* AudioToolbox.framework in Frameworks */,
 				DD3A91061982C0C0007AEBE4 /* libTapkuLibrary.a in Frameworks */,
@@ -177,6 +197,7 @@
 		DDEFF2C6196C3DAC004ADA85 = {
 			isa = PBXGroup;
 			children = (
+				DD92FC4519932F8A0042F011 /* FBMissingSymbols.m */,
 				DD818261198302100044D149 /* iPad */,
 				DDEFF2D8196C3DAC004ADA85 /* Calendar */,
 				DDEFF2F7196C3DAC004ADA85 /* CalendarTests */,
@@ -401,6 +422,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD92FC4619932F8B0042F011 /* FBMissingSymbols.m in Sources */,
 				DDB153E41989B3090085923D /* ViewController.m in Sources */,
 				DDF2BCCB197F43BE00E2BECA /* ProfileViewController.m in Sources */,
 				DD3A91041982BFDC007AEBE4 /* CalendarViewController.m in Sources */,
@@ -550,7 +572,7 @@
 				);
 				INFOPLIST_FILE = "Calendar/mxmum-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = mxmum;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -575,7 +597,7 @@
 				);
 				INFOPLIST_FILE = "Calendar/mxmum-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = mxmum;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
