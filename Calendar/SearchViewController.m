@@ -19,6 +19,7 @@
 
 @implementation SearchViewController
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -51,6 +52,8 @@
     }
     else
     {
+        _tableView.hidden = YES;
+
         return [self.array count];
     }
     
@@ -85,6 +88,7 @@
 {
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF beginswith[c] %@", searchText];
     self.searchResults = [self.array filteredArrayUsingPredicate:predicate];
+
 }
 
 - (BOOL) searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
