@@ -8,6 +8,7 @@
 
 #import "ProfileViewController.h"
 #import "AutheticationViewController.h"
+#import "AutheticationViewController.m"
 
 @interface ProfileViewController ()
 
@@ -27,6 +28,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+
 }
 
 - (void)didReceiveMemoryWarning

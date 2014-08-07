@@ -11,11 +11,6 @@
 #import "ViewController.h"
 
 @interface AutheticationViewController ()
-{
-    NSFileManager* fileManager;
-    NSString* fullPath;
-    NSFileHandle* fileHandle;
-}
 
 @end
 
@@ -137,11 +132,15 @@
     }
 }
 
-- (void) registerNewUser {
+- (NSString *) registerNewUser {
     PFUser *newUser = [PFUser user];
     newUser.username = _emailTextField.text;
     newUser.email = _emailTextField.text;
     newUser.password = _passwordTextField.text;
+    
+    [newUser setObject:_nameTextField.text forKey:@"fullName"];
+    NSString* myName = [newUser objectForKey:@"fullName"];
+    NSLog(@"fullName = %@", myName);
     
     
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
@@ -156,8 +155,11 @@
         }
         else {
             NSLog(@"Error in registering");
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sorry" message:@"Invalid email or the email is already in use" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+            [alert show];
         }
     }];
+    return myName;
 
 }
 
