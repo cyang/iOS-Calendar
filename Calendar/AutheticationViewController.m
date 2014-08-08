@@ -9,6 +9,7 @@
 #import "AutheticationViewController.h"
 #import "CalendarViewController.h"
 #import "ViewController.h"
+#import "ProfileViewController.h"
 
 @interface AutheticationViewController ()
 
@@ -123,9 +124,6 @@ PFUser *newUser;
     newUser.password = _passwordTextField.text;
     
     [newUser setObject:_nameTextField.text forKey:@"fullName"];
-    NSString* myName = [newUser objectForKey:@"fullName"];
-    NSLog(@"fullName = %@", myName);
-
     
     
     
@@ -152,6 +150,16 @@ PFUser *newUser;
 - (IBAction)loginPressed:(id)sender {
     [PFUser logInWithUsernameInBackground:_loginEmailTextField.text password:_loginPasswordTextField.text block:^(PFUser *user, NSError *error) {
         if (!error) {
+            NSLog(@"object ID = %@", [user objectId]);
+            
+            ProfileViewController *vc = [ProfileViewController alloc];
+            
+            PFQuery *query = [PFUser query];
+            [query getObjectInBackgroundWithId:[user objectId] block:^(PFObject *object, NSError *error) {
+                vc.fullNameLabel.text = object[@"fullName"];
+            }];
+         
+            
             NSLog(@"Login user");
             //CalendarViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"Calendar"];
             //[self presentViewController:vc animated:YES completion:nil];

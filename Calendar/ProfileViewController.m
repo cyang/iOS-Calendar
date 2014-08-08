@@ -7,7 +7,7 @@
 //
 
 #import "ProfileViewController.h"
-#import "AutheticationViewController.h"
+#import "AutheticationViewController.m"
 
 
 @interface ProfileViewController ()
@@ -27,18 +27,7 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    
-    
-    PFQuery *query = [PFUser query];
-    [query getObjectInBackgroundWithId:@"NcrI8gHp3t" block:^(PFObject *newUser, NSError *error) {
-        // Do something with the returned PFObject in the gameScore variable.
-        
-        _fullNameLabel.text = newUser[@"fullName"];
-    }];
-
-    
-    
+    [super viewDidLoad];    
 }
 
 - (void)didReceiveMemoryWarning
