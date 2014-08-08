@@ -19,6 +19,8 @@
 NSIndexPath* checkedIndexPath;
 NSArray *array;
 
+PFUser *newUser;
+
 
 
 
@@ -34,8 +36,9 @@ NSArray *array;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    newUser = [PFUser user];
     
-    array = [NSArray arrayWithObjects:@"Model", @"Photographer", @"Artist", @"Hello", @"World", nil];
+    array = [NSArray arrayWithObjects:@"Model", @"Photographer", @"Artist", @"Intern", @"World", nil];
     
     self.emailTextField.delegate = self;
     self.passwordTextField.delegate = self;
@@ -114,7 +117,7 @@ NSArray *array;
 
 - (void) registerNewUser {
     
-    PFUser *newUser = [PFUser user];
+    
     newUser.username = _emailTextField.text;
     newUser.email = _emailTextField.text;
     newUser.password = _passwordTextField.text;
@@ -122,6 +125,8 @@ NSArray *array;
     [newUser setObject:_nameTextField.text forKey:@"fullName"];
     NSString* myName = [newUser objectForKey:@"fullName"];
     NSLog(@"fullName = %@", myName);
+
+    
     
     
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
@@ -172,7 +177,6 @@ NSArray *array;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    
     static NSString *simpleTableIdentifier = @"SimpleTableCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
@@ -197,6 +201,7 @@ NSArray *array;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Uncheck the previous checked row
+    
     if(self.checkedIndexPath)
     {
         UITableViewCell* uncheckCell = [tableView
@@ -206,9 +211,15 @@ NSArray *array;
     UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
     self.checkedIndexPath = indexPath;
+    
+    UITableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
+    NSString *cellText = selectedCell.textLabel.text;
+
+    
+    [newUser setObject:cellText forKey:@"categoryChosen"];
+    cellText = [newUser objectForKey:@"categoryChosen"];
+    NSLog(@"chosenCategory = %@", cellText);
 }
-
-
 
 
 
