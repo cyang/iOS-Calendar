@@ -27,7 +27,10 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];    
+    [super viewDidLoad];
+    PFUser *currentUser = [PFUser currentUser];
+    self.fullNameLabel.text = currentUser[@"fullName"];
+    self.categoryChosenLabel.text = currentUser[@"categoryChosen"];
 }
 
 - (void)didReceiveMemoryWarning

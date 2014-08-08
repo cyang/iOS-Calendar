@@ -21,5 +21,6 @@
 - (IBAction)confirm:(UIButton *)sender;
 - (IBAction)logoutPressed:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UILabel *categoryChosenLabel;
 
 @end

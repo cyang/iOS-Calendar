@@ -454,6 +454,13 @@
                                     <action selector="logoutPressed:" destination="zVO-QI-BgK" eventType="touchUpInside" id="TgI-jd-jCZ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgd-mC-fyG">
+                                <rect key="frame" x="143" y="85" width="153" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.944652259349823" green="0.016330901449962607" blue="0.088607499871925011" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -463,6 +470,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="16p-41-t3A"/>
                     <connections>
+                        <outlet property="categoryChosenLabel" destination="dgd-mC-fyG" id="I6u-2O-AZc"/>
                         <outlet property="fullNameLabel" destination="nFD-Qd-Q23" id="571-yI-0WB"/>
                         <outlet property="imageView" destination="sTS-ZM-ee3" id="02J-Ou-2st"/>
                     </connections>
