@@ -28,11 +28,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    AutheticationViewController *vc = [[AutheticationViewController alloc] init];
-    NSString *name = [vc registerNewUser];
-    NSLog(@"name = %@", name);
     
+    
+    PFQuery *query = [PFUser query];
+    [query getObjectInBackgroundWithId:@"NcrI8gHp3t" block:^(PFObject *newUser, NSError *error) {
+        // Do something with the returned PFObject in the gameScore variable.
+        
+        _fullNameLabel.text = newUser[@"fullName"];
+    }];
 
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

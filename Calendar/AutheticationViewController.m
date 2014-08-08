@@ -12,11 +12,14 @@
 
 @interface AutheticationViewController ()
 
-
-
 @end
 
 @implementation AutheticationViewController
+
+NSIndexPath* checkedIndexPath;
+NSArray *array;
+
+
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -32,6 +35,8 @@
 {
     [super viewDidLoad];
     
+    array = [NSArray arrayWithObjects:@"Model", @"Photographer", @"Artist", @"Hello", @"World", nil];
+    
     self.emailTextField.delegate = self;
     self.passwordTextField.delegate = self;
     self.nameTextField.delegate = self;
@@ -39,18 +44,6 @@
     
     self.loginEmailTextField.delegate = self;
     self.loginPasswordTextField.delegate = self;
-    
-    /*
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *filePath = [paths objectAtIndex:0];
-    
-    fileManager = [NSFileManager defaultManager];
-    fileHandle = [NSFileHandle fileHandleForUpdatingAtPath:[filePath stringByAppendingPathComponent:@"Key.txt"]];
-    
-    
-    [fileManager changeCurrentDirectoryPath:filePath];
-    fullPath = [NSString stringWithFormat:@"%@", [filePath stringByAppendingPathComponent:@"Key.txt"]];
-    */ 
 }
 
 
@@ -111,21 +104,6 @@
         
         [alert show];
         
-        /*
-         BOOL fileExist = [[NSFileManager defaultManager]fileExistsAtPath:fullPath];
-         if (fileExist) {
-         [fileManager createFileAtPath:fullPath contents:nil attributes:nil];
-         }
-         
-         NSString *emailAndPasswordString = [NSString stringWithFormat:@"%@\n%@", self.setEmailAddressTextField.text, self.confirmPasswordTextField.text];
-         fileHandle = [NSFileHandle fileHandleForUpdatingAtPath:fullPath];
-         NSData *data;
-         const char *bytesOfEmailAndPassword = [emailAndPasswordString UTF8String];
-         data = [NSData dataWithBytes:bytesOfEmailAndPassword length:strlen(bytesOfEmailAndPassword)];
-         [data writeToFile:fullPath atomically:YES];
-         
-         */
-        
     }
     else {
         NSLog(@"Passwords match");
@@ -134,7 +112,8 @@
     }
 }
 
-- (NSString *) registerNewUser {
+- (void) registerNewUser {
+    
     PFUser *newUser = [PFUser user];
     newUser.username = _emailTextField.text;
     newUser.email = _emailTextField.text;
@@ -161,8 +140,8 @@
             [alert show];
         }
     }];
-    return myName;
 }
+
 
 
 - (IBAction)loginPressed:(id)sender {
@@ -182,51 +161,56 @@
             [alert show];
         }
     }];
+}
+
+#pragma Table View Methods
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [array count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     
     
-    /*BOOL fileExist = [[NSFileManager defaultManager]fileExistsAtPath:fullPath];
-    if (!fileExist) {
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Haven't set email and passwod" message:@"Please set email and password" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-        [alert show];
+    static NSString *simpleTableIdentifier = @"SimpleTableCell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
+    
+    cell.textLabel.text = [array objectAtIndex:indexPath.row];
+    
+    if([self.checkedIndexPath isEqual:indexPath])
+    {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
     }
     else
     {
-        fileHandle = [NSFileHandle fileHandleForUpdatingAtPath:fullPath];
-        NSString *stringFromFile = [NSString stringWithContentsOfFile:fullPath encoding:NSASCIIStringEncoding error:nil];
-        
-        const char *charsFromFile = [stringFromFile UTF8String];
-        
-        NSString *emailFromFile = [[NSString alloc]init];
-        NSString *passwordFromFile = [[NSString alloc]init];
-        
-        int count = 0;
-        for (int i = 0; i < strlen(charsFromFile); i++) {
-            if (charsFromFile[i]=='\n') {
-                ++count;
-            }
-            else if(count == 0) // append characters to usernamefromfile
-            {
-                emailFromFile = [emailFromFile stringByAppendingString:[NSString stringWithFormat:@"%c", charsFromFile[i]]];
-            }
-            else    // append characters to passwordfromfile
-            {
-                passwordFromFile = [passwordFromFile stringByAppendingString:[NSString stringWithFormat:@"%c", charsFromFile[i]]];
-            }
-        }
-        
-        if ([emailFromFile isEqualToString:self.emailTextField.text] && [passwordFromFile isEqualToString:self.passwordTextField.text]) {
-            CalendarViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"1"];
-            [self presentViewController:vc animated:YES completion:nil];
-            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Success" message:@"You've logged in!" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-            [alert show];
-        }
-        else
-        {
-            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Mismatch" message:@"Email or password is incorrect" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-            [alert show];
-        }
-    }*/
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    
+    return cell;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Uncheck the previous checked row
+    if(self.checkedIndexPath)
+    {
+        UITableViewCell* uncheckCell = [tableView
+                                        cellForRowAtIndexPath:self.checkedIndexPath];
+        uncheckCell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    self.checkedIndexPath = indexPath;
+}
+
+
+
+
 
 
 @end

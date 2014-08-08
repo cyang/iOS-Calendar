@@ -9,7 +9,8 @@
 #import "ViewController.h"
 #import <Parse/Parse.h>
 
-@interface AutheticationViewController : UIViewController <UITextFieldDelegate>
+@interface AutheticationViewController : UIViewController <UITextFieldDelegate,UITableViewDelegate, UITableViewDataSource>
+
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
@@ -19,10 +20,13 @@
 @property (weak, nonatomic) IBOutlet UITextField *loginEmailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *loginPasswordTextField;
 
+@property (nonatomic, retain) NSIndexPath* checkedIndexPath;
+
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 - (IBAction)loginPressed:(id)sender;
 
-- (NSString *)registerNewUser;
 
 - (IBAction)setEmailAndPassword:(id)sender;
 
