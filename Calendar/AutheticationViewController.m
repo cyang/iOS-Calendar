@@ -128,16 +128,23 @@ PFUser *newUser;
     
     
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (!error) {
+        if (!error)
+        {
             NSLog(@"Registration success");
             
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Done Setting Email and Password" message:@"Completed" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Done Setting Email and password" message:@"Logged in!" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+            
             [alert show];
             
-            AutheticationViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"2"];
-            [self presentViewController:vc animated:YES completion:nil];
+            [PFUser logInWithUsernameInBackground:_emailTextField.text password:_passwordTextField.text block:^(PFUser *user, NSError *error) {
+                
+                CalendarViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"Calendar"];
+                [self presentViewController:vc animated:YES completion:nil];
+            }];
+            
         }
-        else {
+        else
+        {
             NSLog(@"Error in registering");
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sorry" message:@"Invalid email or the email is already in use" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
             [alert show];
