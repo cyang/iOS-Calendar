@@ -55,28 +55,22 @@
     picker.delegate = self;
     picker.allowsEditing = YES;
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    
     [self presentViewController:picker animated:YES completion:NULL];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     self.imageView.image = chosenImage;
-    
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-    
     [picker dismissViewControllerAnimated:YES completion:NULL];
-    
 }
 
 - (IBAction)confirm:(UIButton *)sender {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"Saved changes" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-    
     [alert show];
 }
 
@@ -84,6 +78,6 @@
     [PFUser logOut];
     AutheticationViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"2"];
     [self presentViewController:vc animated:YES completion:nil];
-    
 }
+
 @end

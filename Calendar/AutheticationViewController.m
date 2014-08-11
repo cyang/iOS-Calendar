@@ -19,14 +19,7 @@
 
 NSIndexPath* checkedIndexPath;
 NSArray *categories;
-
-
-
 PFUser *newUser;
-
-
-
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,8 +29,6 @@ PFUser *newUser;
     }
     return self;
 }
-
-
 
 - (void)viewDidLoad
 {
@@ -98,43 +89,28 @@ PFUser *newUser;
 -(void)checkPasswordsMatched {
     if (![_passwordTextField.text isEqualToString:_confirmPasswordTextField.text]) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Your entered passwords do not match" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-        
         [alert show];
-        
     }
     else {
         [self registerNewUser];
-
     }
 }
 
 
 - (void) registerNewUser {
-    
-    
     newUser.username = _emailTextField.text;
     newUser.email = _emailTextField.text;
     newUser.password = _passwordTextField.text;
-    
     [newUser setObject:_nameTextField.text forKey:@"fullName"];
-    
-    
-    
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error)
         {
-            
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Done Setting Email and password" message:@"Logged in!" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-            
             [alert show];
-            
             [PFUser logInWithUsernameInBackground:_emailTextField.text password:_passwordTextField.text block:^(PFUser *user, NSError *error) {
-        
                 CalendarViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"Calendar"];
                 [self presentViewController:vc animated:YES completion:nil];
-                
             }];
-            
         }
         else
         {
@@ -144,13 +120,10 @@ PFUser *newUser;
     }];
 }
 
-
-
 - (IBAction)loginPressed:(id)sender {
     [PFUser logInWithUsernameInBackground:_loginEmailTextField.text password:_loginPasswordTextField.text block:^(PFUser *user, NSError *error) {
         if (!error) {
             [self performSegueWithIdentifier:@"login" sender:self];
-            
             UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Success" message:@"You've logged in!" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
             [alert show];
         }
@@ -169,17 +142,12 @@ PFUser *newUser;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     static NSString *simpleTableIdentifier = @"SimpleTableCell";
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-    
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
-    
     cell.textLabel.text = [categories objectAtIndex:indexPath.row];
-    
     if([self.checkedIndexPath isEqual:indexPath])
     {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
@@ -188,13 +156,11 @@ PFUser *newUser;
     {
         cell.accessoryType = UITableViewCellAccessoryNone;
     }
-    
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Uncheck the previous checked row
-    
     if(self.checkedIndexPath)
     {
         UITableViewCell* uncheckCell = [tableView
@@ -204,16 +170,10 @@ PFUser *newUser;
     UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
     self.checkedIndexPath = indexPath;
-    
     UITableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
     self.cellText = selectedCell.textLabel.text;
-    NSLog(@"%@", self.cellText);
-    
     [newUser setObject:self.cellText forKey:@"categoryChosen"];
     self.cellText = [newUser objectForKey:@"categoryChosen"];
 }
-
-
-
 
 @end

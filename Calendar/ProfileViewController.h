@@ -11,16 +11,12 @@
 
 @interface ProfileViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
-
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
-
+@property (weak, nonatomic) IBOutlet UILabel *fullNameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *categoryChosenLabel;
 
 - (IBAction)selectPhoto:(UIButton *)sender;
-
-@property (weak, nonatomic) IBOutlet UILabel *fullNameLabel;
 - (IBAction)confirm:(UIButton *)sender;
 - (IBAction)logoutPressed:(id)sender;
-
-@property (strong, nonatomic) IBOutlet UILabel *categoryChosenLabel;
 
 @end

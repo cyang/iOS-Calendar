@@ -15,13 +15,9 @@
 @property (strong, nonatomic) NSMutableArray *array;
 @property (strong, nonatomic) NSArray *searchResults;
 
-
-
 @end
 
 @implementation SearchViewController
-
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,14 +31,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    
     self.array = [[NSMutableArray alloc] init];
-    
-
-    
     self.searchResults = [[NSArray alloc] init];
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,23 +51,17 @@
     else
     {
         //_tableView.hidden = YES;
-
         return [self.array count];
     }
-    
-    //return [self.array count];
-    
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellID = @"cellID";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-    
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
     }
-    
     if (tableView == self.searchDisplayController.searchResultsTableView) {
         cell.textLabel.text = [self.searchResults objectAtIndex:indexPath.row];
     }
@@ -85,8 +69,6 @@
     {
         cell.textLabel.text = [self.array objectAtIndex:indexPath.row];
     }
-    
-    //cell.textLabel.text = [self.array objectAtIndex:indexPath.row];
     return  cell;
 }
 
@@ -96,7 +78,6 @@
 {
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF beginswith[c] %@", searchText];
     self.searchResults = [self.array filteredArrayUsingPredicate:predicate];
-
 }
 
 - (BOOL) searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
@@ -105,17 +86,4 @@
     return YES;
 }
 
-
-
-
-
 @end
-
-
-
-
-
-
-
-
-
