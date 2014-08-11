@@ -20,6 +20,7 @@
 NSIndexPath* checkedIndexPath;
 NSArray *array;
 
+
 PFUser *newUser;
 
 
@@ -92,7 +93,7 @@ PFUser *newUser;
 
 -(void)checkFieldsComplete{
     if ([_emailTextField.text isEqualToString:@""] || [_passwordTextField.text isEqualToString:@""] || [_confirmPasswordTextField.text isEqualToString:@""] || [_nameTextField.text isEqualToString:@""]){
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"You must complete all fields" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"You must complete all fields" delegate:nil cancelButtonTitle:nil     otherButtonTitles:@"OK", nil];
         [alert show];
     }
     else {
@@ -130,6 +131,7 @@ PFUser *newUser;
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error)
         {
+            
             NSLog(@"Registration success");
             
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Done Setting Email and password" message:@"Logged in!" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
@@ -137,9 +139,11 @@ PFUser *newUser;
             [alert show];
             
             [PFUser logInWithUsernameInBackground:_emailTextField.text password:_passwordTextField.text block:^(PFUser *user, NSError *error) {
+                newUser = [PFUser currentUser];
                 
-                CalendarViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"Calendar"];
-                [self presentViewController:vc animated:YES completion:nil];
+            CalendarViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"Calendar"];
+            [self presentViewController:vc animated:YES completion:nil];
+                
             }];
             
         }
@@ -224,7 +228,6 @@ PFUser *newUser;
     
     [newUser setObject:cellText forKey:@"categoryChosen"];
     cellText = [newUser objectForKey:@"categoryChosen"];
-    NSLog(@"chosenCategory = %@", cellText);
 }
 
 

@@ -7,10 +7,11 @@
 //
 
 #import "SearchViewController.h"
+#import <Parse/Parse.h>
 
 @interface SearchViewController ()
 
-@property (strong, nonatomic) NSArray *array;
+@property (strong, nonatomic) NSMutableArray *array;
 @property (strong, nonatomic) NSArray *searchResults;
 
 
@@ -18,6 +19,7 @@
 @end
 
 @implementation SearchViewController
+
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -32,7 +34,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.array = [[NSArray alloc] initWithObjects:@"Artem", @"Polina", @"Jenny", @"Chris", @"mxmum", @"mxmum2" , nil];
+    
+    
+    PFUser *currentUser = [PFUser currentUser];
+   
+    
+    self.array = [[NSMutableArray alloc]init];
+    [_array addObject:currentUser[@"fullName"]];
+
+    
     self.searchResults = [[NSArray alloc] init];
     
 }
@@ -52,7 +62,7 @@
     }
     else
     {
-        _tableView.hidden = YES;
+        //_tableView.hidden = YES;
 
         return [self.array count];
     }
