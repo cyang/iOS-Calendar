@@ -16,19 +16,17 @@
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UITextField *confirmPasswordTextField;
-
 @property (weak, nonatomic) IBOutlet UITextField *loginEmailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *loginPasswordTextField;
-
 @property (nonatomic, retain) NSIndexPath* checkedIndexPath;
-
-
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property(strong, nonatomic) NSMutableArray *searchList;
+@property(strong, nonatomic) NSString *cellText;
 
 - (IBAction)loginPressed:(id)sender;
-
-
 - (IBAction)setEmailAndPassword:(id)sender;
+
+
 
 
 

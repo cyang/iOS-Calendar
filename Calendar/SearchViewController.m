@@ -8,6 +8,7 @@
 
 #import "SearchViewController.h"
 #import <Parse/Parse.h>
+#import "AutheticationViewController.h"
 
 @interface SearchViewController ()
 
@@ -36,11 +37,8 @@
     [super viewDidLoad];
     
     
-    PFUser *currentUser = [PFUser currentUser];
-   
+    self.array = [[NSMutableArray alloc] init];
     
-    self.array = [[NSMutableArray alloc]init];
-    [_array addObject:currentUser[@"fullName"]];
 
     
     self.searchResults = [[NSArray alloc] init];

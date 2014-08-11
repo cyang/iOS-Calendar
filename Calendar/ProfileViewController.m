@@ -82,7 +82,6 @@
 
 - (IBAction)logoutPressed:(id)sender {
     [PFUser logOut];
-    NSLog(@"Logout");
     AutheticationViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"2"];
     [self presentViewController:vc animated:YES completion:nil];
     

@@ -18,10 +18,12 @@
 @implementation AutheticationViewController
 
 NSIndexPath* checkedIndexPath;
-NSArray *array;
+NSArray *categories;
+
 
 
 PFUser *newUser;
+
 
 
 
@@ -35,29 +37,32 @@ PFUser *newUser;
     return self;
 }
 
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     newUser = [PFUser user];
+    self.cellText = @"";
     
-    array = [NSArray arrayWithObjects:@"Model", @"Photographer", @"Artist", @"Intern", @"World", nil];
-    
+    categories = [NSArray arrayWithObjects:@"Model", @"Photographer", @"Artist", @"Intern", @"World", nil];
+    [self delegateTextField];
+}
+
+- (void)delegateTextField{
     self.emailTextField.delegate = self;
     self.passwordTextField.delegate = self;
     self.nameTextField.delegate = self;
     self.confirmPasswordTextField.delegate = self;
-    
     self.loginEmailTextField.delegate = self;
     self.loginPasswordTextField.delegate = self;
 }
-
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self.emailTextField resignFirstResponder];
     [self.passwordTextField resignFirstResponder];
     [self.nameTextField resignFirstResponder];
     [self.confirmPasswordTextField resignFirstResponder];
-    
     [self.loginEmailTextField resignFirstResponder];
     [self.loginPasswordTextField resignFirstResponder];
 }
@@ -75,24 +80,13 @@ PFUser *newUser;
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 
 - (IBAction)setEmailAndPassword:(id)sender {
     [self checkFieldsComplete];
 }
 
 -(void)checkFieldsComplete{
-    if ([_emailTextField.text isEqualToString:@""] || [_passwordTextField.text isEqualToString:@""] || [_confirmPasswordTextField.text isEqualToString:@""] || [_nameTextField.text isEqualToString:@""]){
+    if ([_emailTextField.text isEqualToString:@""] || [_passwordTextField.text isEqualToString:@""] || [_confirmPasswordTextField.text isEqualToString:@""] || [_nameTextField.text isEqualToString:@""] || [self.cellText isEqualToString:@""]){
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"You must complete all fields" delegate:nil cancelButtonTitle:nil     otherButtonTitles:@"OK", nil];
         [alert show];
     }
@@ -103,19 +97,17 @@ PFUser *newUser;
 
 -(void)checkPasswordsMatched {
     if (![_passwordTextField.text isEqualToString:_confirmPasswordTextField.text]) {
-        NSLog(@"Passwords don't match");
-        
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Your entered passwords do not match" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
         
         [alert show];
         
     }
     else {
-        NSLog(@"Passwords match");
         [self registerNewUser];
 
     }
 }
+
 
 - (void) registerNewUser {
     
@@ -132,24 +124,20 @@ PFUser *newUser;
         if (!error)
         {
             
-            NSLog(@"Registration success");
-            
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Done Setting Email and password" message:@"Logged in!" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
             
             [alert show];
             
             [PFUser logInWithUsernameInBackground:_emailTextField.text password:_passwordTextField.text block:^(PFUser *user, NSError *error) {
-                newUser = [PFUser currentUser];
-                
-            CalendarViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"Calendar"];
-            [self presentViewController:vc animated:YES completion:nil];
+        
+                CalendarViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"Calendar"];
+                [self presentViewController:vc animated:YES completion:nil];
                 
             }];
             
         }
         else
         {
-            NSLog(@"Error in registering");
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sorry" message:@"Invalid email or the email is already in use" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
             [alert show];
         }
@@ -161,11 +149,6 @@ PFUser *newUser;
 - (IBAction)loginPressed:(id)sender {
     [PFUser logInWithUsernameInBackground:_loginEmailTextField.text password:_loginPasswordTextField.text block:^(PFUser *user, NSError *error) {
         if (!error) {
-            
-            NSLog(@"Login user");
-            //CalendarViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"Calendar"];
-            //[self presentViewController:vc animated:YES completion:nil];
-            
             [self performSegueWithIdentifier:@"login" sender:self];
             
             UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Success" message:@"You've logged in!" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
@@ -181,7 +164,7 @@ PFUser *newUser;
 #pragma Table View Methods
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [array count];
+    return [categories count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -195,7 +178,7 @@ PFUser *newUser;
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    cell.textLabel.text = [array objectAtIndex:indexPath.row];
+    cell.textLabel.text = [categories objectAtIndex:indexPath.row];
     
     if([self.checkedIndexPath isEqual:indexPath])
     {
@@ -223,11 +206,11 @@ PFUser *newUser;
     self.checkedIndexPath = indexPath;
     
     UITableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
-    NSString *cellText = selectedCell.textLabel.text;
-
+    self.cellText = selectedCell.textLabel.text;
+    NSLog(@"%@", self.cellText);
     
-    [newUser setObject:cellText forKey:@"categoryChosen"];
-    cellText = [newUser objectForKey:@"categoryChosen"];
+    [newUser setObject:self.cellText forKey:@"categoryChosen"];
+    self.cellText = [newUser objectForKey:@"categoryChosen"];
 }
 
 
