@@ -35,8 +35,7 @@ PFUser *newUser;
     [super viewDidLoad];
     newUser = [PFUser user];
     self.cellText = @"";
-    
-    categories = [NSArray arrayWithObjects:@"Model", @"Photographer", @"Artist", @"Intern", @"World", nil];
+    categories = [NSArray arrayWithObjects:@"Artist", @"Designer", @"Intern", @"Model", @"Photographer", nil];
     [self delegateTextField];
 }
 

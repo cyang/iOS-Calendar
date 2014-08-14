@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		DD04E2EA198869B800073E1B /* AutheticationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD04E2E9198869B800073E1B /* AutheticationViewController.m */; };
+		DD26827E199955CC00D60901 /* gear-2-xxl.png in Resources */ = {isa = PBXBuildFile; fileRef = DD26827D199955CC00D60901 /* gear-2-xxl.png */; };
 		DD3A90F71982BEDD007AEBE4 /* TapkuLibrary.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DD3A90F31982BEDD007AEBE4 /* TapkuLibrary.bundle */; };
 		DD3A91011982BF1B007AEBE4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0FB4D6197DB20700B89269 /* MapKit.framework */; };
 		DD3A91041982BFDC007AEBE4 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3A91031982BFDC007AEBE4 /* CalendarViewController.m */; };
 		DD3A91061982C0C0007AEBE4 /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3A90FB1982BEDD007AEBE4 /* libTapkuLibrary.a */; };
+		DD48C6E8199D247500C2BB23 /* AddEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD48C6E7199D247500C2BB23 /* AddEventViewController.m */; };
 		DD92FBCA199302F10042F011 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92FBC9199302F10042F011 /* AudioToolbox.framework */; };
 		DD92FBCD199302F90042F011 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92FBCC199302F90042F011 /* CFNetwork.framework */; };
 		DD92FBCF1993030B0042F011 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92FBCE1993030B0042F011 /* CoreLocation.framework */; };
@@ -85,11 +87,14 @@
 		DD04E2E8198869B800073E1B /* AutheticationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutheticationViewController.h; sourceTree = "<group>"; };
 		DD04E2E9198869B800073E1B /* AutheticationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutheticationViewController.m; sourceTree = "<group>"; };
 		DD0FB4D6197DB20700B89269 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DD26827D199955CC00D60901 /* gear-2-xxl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gear-2-xxl.png"; sourceTree = "<group>"; };
 		DD2BD5FB1991BD290096D08C /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		DD3A90F31982BEDD007AEBE4 /* TapkuLibrary.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TapkuLibrary.bundle; path = ../../tapkulibrary/src/TapkuLibrary.bundle; sourceTree = "<group>"; };
 		DD3A90F41982BEDD007AEBE4 /* TapkuLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TapkuLibrary.xcodeproj; path = ../../tapkulibrary/src/TapkuLibrary.xcodeproj; sourceTree = "<group>"; };
 		DD3A91021982BFDC007AEBE4 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
 		DD3A91031982BFDC007AEBE4 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		DD48C6E6199D247500C2BB23 /* AddEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEventViewController.h; sourceTree = "<group>"; };
+		DD48C6E7199D247500C2BB23 /* AddEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEventViewController.m; sourceTree = "<group>"; };
 		DD92FBC9199302F10042F011 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		DD92FBCC199302F90042F011 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		DD92FBCE1993030B0042F011 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -254,10 +259,11 @@
 				DD04E2E9198869B800073E1B /* AutheticationViewController.m */,
 				DDB153E51989CFEE0085923D /* SearchViewController.h */,
 				DDB153E61989CFEE0085923D /* SearchViewController.m */,
-				DDF2BCCE197F48C200E2BECA /* anonymous.jpg */,
 				DDEFF2E1196C3DAC004ADA85 /* AppDelegate.h */,
 				DDEFF2E2196C3DAC004ADA85 /* AppDelegate.m */,
 				DDEFF2E4196C3DAC004ADA85 /* Main.storyboard */,
+				DD48C6E6199D247500C2BB23 /* AddEventViewController.h */,
+				DD48C6E7199D247500C2BB23 /* AddEventViewController.m */,
 				DD3A91021982BFDC007AEBE4 /* CalendarViewController.h */,
 				DD3A91031982BFDC007AEBE4 /* CalendarViewController.m */,
 				DDB153E21989B3090085923D /* ViewController.h */,
@@ -273,6 +279,8 @@
 		DDEFF2D9196C3DAC004ADA85 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DD26827D199955CC00D60901 /* gear-2-xxl.png */,
+				DDF2BCCE197F48C200E2BECA /* anonymous.jpg */,
 				DDEFF2DA196C3DAC004ADA85 /* mxmum-Info.plist */,
 				DDEFF2DB196C3DAC004ADA85 /* InfoPlist.strings */,
 				DDEFF2DE196C3DAC004ADA85 /* main.m */,
@@ -400,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDEFF2EB196C3DAC004ADA85 /* Images.xcassets in Resources */,
+				DD26827E199955CC00D60901 /* gear-2-xxl.png in Resources */,
 				DDF2BCCF197F48C200E2BECA /* anonymous.jpg in Resources */,
 				DD3A90F71982BEDD007AEBE4 /* TapkuLibrary.bundle in Resources */,
 				DDEFF2DD196C3DAC004ADA85 /* InfoPlist.strings in Resources */,
@@ -430,6 +439,7 @@
 				DDEFF2E3196C3DAC004ADA85 /* AppDelegate.m in Sources */,
 				DDEFF2DF196C3DAC004ADA85 /* main.m in Sources */,
 				DDB153E71989CFEE0085923D /* SearchViewController.m in Sources */,
+				DD48C6E8199D247500C2BB23 /* AddEventViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

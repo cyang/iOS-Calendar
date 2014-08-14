@@ -24,7 +24,6 @@ float height;
 - (void) viewDidLoad{
 	[super viewDidLoad];
     
-
 	[self.monthView selectDate:[NSDate date]];
     CGRect myCalendar = self.monthView.frame;
     myCalendar.origin.y = 64.28;

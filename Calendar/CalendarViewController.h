@@ -15,6 +15,7 @@
 @property (nonatomic,strong) NSMutableArray *dataArray;
 @property (nonatomic,strong) NSMutableDictionary *dataDictionary;
 
+
 - (void) generateRandomDataForStartDate:(NSDate*)start endDate:(NSDate*)end;
 
 @end

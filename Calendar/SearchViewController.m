@@ -12,12 +12,11 @@
 
 @interface SearchViewController ()
 
-@property (strong, nonatomic) NSMutableArray *array;
-@property (strong, nonatomic) NSArray *searchResults;
-
 @end
 
 @implementation SearchViewController
+
+NSMutableArray* array;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,7 +30,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.array = [[NSMutableArray alloc] init];
+ 
+    self.array = [[NSMutableArray alloc] initWithObjects:@"Cool", nil];
+ 
     self.searchResults = [[NSArray alloc] init];
 }
 
@@ -85,5 +86,6 @@
     [self filterContentForSearchText:searchString scope:[[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
     return YES;
 }
+
 
 @end
