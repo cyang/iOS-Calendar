@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddEventViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UITextField *notesTextField;
+@interface AddEventViewController : UIViewController <UITextFieldDelegate>
 
+@property (strong, nonatomic) IBOutlet UITextView *notesTextView;
+@property (weak, nonatomic) IBOutlet UITextField *eventNameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *locationTextField;
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+
+- (IBAction)selectPressed:(id)sender;
+
+@property (strong, nonatomic) IBOutlet UIButton *startDateButton;
+@property (strong, nonatomic) IBOutlet UIButton *endsDateButton;
 @end
